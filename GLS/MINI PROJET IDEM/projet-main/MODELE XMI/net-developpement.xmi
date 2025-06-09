@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<petrinet:PetriNet
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:petrinet="http://petrinet"
+    xsi:schemaLocation="http://petrinet PetriNet.ecore"
+    name="Developpement">
+  <!-- Places pour les états des WorkDefinitions -->
+  <petriNetElements xsi:type="petrinet:Place" name="Conception_NotStarted" numJetons="1"/>
+  <petriNetElements xsi:type="petrinet:Place" name="Conception_InProgress" numJetons="0"/>
+  <petriNetElements xsi:type="petrinet:Place" name="Conception_Finished" numJetons="0"/>
+  <petriNetElements xsi:type="petrinet:Place" name="RedactionDoc_NotStarted" numJetons="1"/>
+  <petriNetElements xsi:type="petrinet:Place" name="RedactionDoc_InProgress" numJetons="0"/>
+  <petriNetElements xsi:type="petrinet:Place" name="RedactionDoc_Finished" numJetons="0"/>
+  <petriNetElements xsi:type="petrinet:Place" name="Programmation_NotStarted" numJetons="1"/>
+  <petriNetElements xsi:type="petrinet:Place" name="Programmation_InProgress" numJetons="0"/>
+  <petriNetElements xsi:type="petrinet:Place" name="Programmation_Finished" numJetons="0"/>
+  <petriNetElements xsi:type="petrinet:Place" name="RedactionTests_NotStarted" numJetons="1"/>
+  <petriNetElements xsi:type="petrinet:Place" name="RedactionTests_InProgress" numJetons="0"/>
+  <petriNetElements xsi:type="petrinet:Place" name="RedactionTests_Finished" numJetons="0"/>
+  
+  <!-- Places pour les ressources -->
+  <petriNetElements xsi:type="petrinet:Place" name="Concepteur" numJetons="2"/>
+  <petriNetElements xsi:type="petrinet:Place" name="Redacteur" numJetons="1"/>
+  <petriNetElements xsi:type="petrinet:Place" name="Developpeur" numJetons="3"/>
+  <petriNetElements xsi:type="petrinet:Place" name="Testeur" numJetons="2"/>
+  <petriNetElements xsi:type="petrinet:Place" name="Machine" numJetons="4"/>
+  
+  <!-- Transitions pour les WorkDefinitions -->
+  <petriNetElements xsi:type="petrinet:Transition" name="Conception_Start"/>
+  <petriNetElements xsi:type="petrinet:Transition" name="Conception_Finish"/>
+  <petriNetElements xsi:type="petrinet:Transition" name="RedactionDoc_Start"/>
+  <petriNetElements xsi:type="petrinet:Transition" name="RedactionDoc_Finish"/>
+  <petriNetElements xsi:type="petrinet:Transition" name="Programmation_Start"/>
+  <petriNetElements xsi:type="petrinet:Transition" name="Programmation_Finish"/>
+  <petriNetElements xsi:type="petrinet:Transition" name="RedactionTests_Start"/>
+  <petriNetElements xsi:type="petrinet:Transition" name="RedactionTests_Finish"/>
+  
+  <!-- Arcs pour Conception -->
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.0" destination="//@petriNetElements.17" weight="1" name="Conception_Start_In"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.17" destination="//@petriNetElements.1" weight="1" name="Conception_Start_Out"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.1" destination="//@petriNetElements.18" weight="1" name="Conception_Finish_In"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.18" destination="//@petriNetElements.2" weight="1" name="Conception_Finish_Out"/>
+  
+  <!-- Arcs pour RedactionDoc -->
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.3" destination="//@petriNetElements.19" weight="1" name="RedactionDoc_Start_In"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.19" destination="//@petriNetElements.4" weight="1" name="RedactionDoc_Start_Out"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.4" destination="//@petriNetElements.20" weight="1" name="RedactionDoc_Finish_In"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.20" destination="//@petriNetElements.5" weight="1" name="RedactionDoc_Finish_Out"/>
+  
+  <!-- Arcs pour Programmation -->
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.6" destination="//@petriNetElements.21" weight="1" name="Programmation_Start_In"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.21" destination="//@petriNetElements.7" weight="1" name="Programmation_Start_Out"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.7" destination="//@petriNetElements.22" weight="1" name="Programmation_Finish_In"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.22" destination="//@petriNetElements.8" weight="1" name="Programmation_Finish_Out"/>
+  
+  <!-- Arcs pour RedactionTests -->
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.9" destination="//@petriNetElements.23" weight="1" name="RedactionTests_Start_In"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.23" destination="//@petriNetElements.10" weight="1" name="RedactionTests_Start_Out"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.10" destination="//@petriNetElements.24" weight="1" name="RedactionTests_Finish_In"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.24" destination="//@petriNetElements.11" weight="1" name="RedactionTests_Finish_Out"/>
+  
+  <!-- Arcs pour les WorkSequences -->
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.2" destination="//@petriNetElements.19" weight="1" name="Conception_to_RedactionDoc"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.2" destination="//@petriNetElements.20" weight="1" name="Conception_to_RedactionDoc_Finish"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.2" destination="//@petriNetElements.21" weight="1" name="Conception_to_Programmation"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.2" destination="//@petriNetElements.23" weight="1" name="Conception_to_RedactionTests"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.8" destination="//@petriNetElements.24" weight="1" name="Programmation_to_RedactionTests_Finish"/>
+  
+  <!-- Arcs pour les ressources -->
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.12" destination="//@petriNetElements.17" weight="1" name="Concepteur_to_Conception"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.18" destination="//@petriNetElements.12" weight="1" name="Conception_to_Concepteur"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.13" destination="//@petriNetElements.19" weight="1" name="Redacteur_to_RedactionDoc"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.20" destination="//@petriNetElements.13" weight="1" name="RedactionDoc_to_Redacteur"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.14" destination="//@petriNetElements.21" weight="2" name="Developpeur_to_Programmation"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.22" destination="//@petriNetElements.14" weight="2" name="Programmation_to_Developpeur"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.15" destination="//@petriNetElements.23" weight="1" name="Testeur_to_RedactionTests"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.24" destination="//@petriNetElements.15" weight="1" name="RedactionTests_to_Testeur"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.16" destination="//@petriNetElements.21" weight="2" name="Machine_to_Programmation"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.22" destination="//@petriNetElements.16" weight="2" name="Programmation_to_Machine"/>
+</petrinet:PetriNet>

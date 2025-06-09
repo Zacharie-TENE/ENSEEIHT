@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<petrinet:PetriNet
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:petrinet="http://petrinet"
+    xsi:schemaLocation="http://petrinet PetriNet.ecore"
+   name="ControleQualite">
+  <petriNetElements xsi:type="petrinet:Place" name="ProduitAControler" numJetons="1"/>
+  <petriNetElements xsi:type="petrinet:Place" name="NormesQualite" numJetons="1"/>
+  <petriNetElements xsi:type="petrinet:Place" name="EquipementTestDisponible" numJetons="1"/>
+  <petriNetElements xsi:type="petrinet:Transition" name="EffectuerControle"/>
+  <petriNetElements xsi:type="petrinet:Place" name="ProduitApprouve" numJetons="0"/>
+  <petriNetElements xsi:type="petrinet:Place" name="ProduitRejete" numJetons="0"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.0" destination="//@petriNetElements.3" weight="1" name="PrendreProduiPourTest"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.1" destination="//@petriNetElements.3" weight="1" type="readArc" name="ConsulterNormes"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.2" destination="//@petriNetElements.3" weight="1" name="UtiliserEquipement"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.3" destination="//@petriNetElements.4" weight="1" name="ApprouverProduit"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.3" destination="//@petriNetElements.5" weight="1" name="RejeterProduit"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.3" destination="//@petriNetElements.2" weight="1" name="RetournerEquipement"/>
+</petrinet:PetriNet>

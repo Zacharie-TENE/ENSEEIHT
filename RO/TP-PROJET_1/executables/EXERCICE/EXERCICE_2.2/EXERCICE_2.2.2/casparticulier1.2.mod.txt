@@ -1,0 +1,59 @@
+###############################  Model ###############################
+#cas particulier 1.2
+###############################  Sets  ###############################
+
+set MAGASINS;
+set FLUIDES;
+set CLIENTS;
+
+
+################### Variables ###################
+
+# Quantité de fluide j fourni par le magasin i pour la commande k
+var x{i in MAGASINS, j in FLUIDES, k in CLIENTS} >= 0;
+
+#Variable binaire représentant si le magasin i dessert le client k
+var y{i in MAGASINS, k in CLIENTS}, binary;
+
+###################  Constants: Data to load   #########################
+
+# Cout de la livraison de fluide j par magasin i
+param C{i in MAGASINS, j in FLUIDES};
+
+# Stock de fluide j disponible au magasin i
+param S{i in MAGASINS, j in FLUIDES};
+
+# Demande de fluide j du client k
+param D{k in CLIENTS, j in FLUIDES};
+
+#Matrice des coûts fixes C'
+param CF{MAGASINS, CLIENTS};
+
+#Matrice des coûts variables C''
+param CV{MAGASINS, CLIENTS};
+
+#borne supérieure pour les contraintes X(i,j,k) sur j
+param U{k in CLIENTS} := sum{j in FLUIDES} D[k, j];
+
+################### Constraints ###################
+
+#chaque client doit être satisfait
+s.t. SatisfaireDemande{k in CLIENTS, j in FLUIDES}:
+  sum{i in MAGASINS} x[i, j, k] = D[k, j];
+
+# dans la limite du stock des magasins
+s.t. RespecterStock{i in MAGASINS, j in FLUIDES}:
+  sum{k in CLIENTS} x[i, j, k] <= S[i, j];
+  
+# Lien entre les quantités expédiées et la desserte des clients
+s.t. LienQuantiteEtDesserte{i in MAGASINS, k in CLIENTS, j in FLUIDES}:
+  x[i, j, k] <= U[k] * y[i, k];
+
+###### Objective ######
+
+# Minimiser le cout total de la livraison ,notre fonction objectif
+minimize TotalCost:
+   sum{i in MAGASINS, k in CLIENTS} (CF[i,k] * y[i,k] + sum{j in FLUIDES} CV[i,k] * x[i,j,k]); 
+  
+######################### End of Model ##############################
+

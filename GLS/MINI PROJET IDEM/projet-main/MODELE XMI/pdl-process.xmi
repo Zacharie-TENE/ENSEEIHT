@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="ASCII"?>
+<simplepdl:Process
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:simplepdl="http://simplepdl"
+    name="developpement">
+  <processElements
+      xsi:type="simplepdl:WorkDefinition"
+      linksToSuccessors="//@processElements.4 //@processElements.5 //@processElements.6 //@processElements.7"
+      linksToAllocator="//@processElements.14 //@processElements.20"
+      name="Conception"/>
+  <processElements
+      xsi:type="simplepdl:WorkDefinition"
+      linksToPredecessors="//@processElements.4 //@processElements.5"
+      linksToAllocator="//@processElements.15 //@processElements.19"
+      name="RedactionDoc"/>
+  <processElements
+      xsi:type="simplepdl:WorkDefinition"
+      linksToPredecessors="//@processElements.6"
+      linksToSuccessors="//@processElements.8"
+      linksToAllocator="//@processElements.16 //@processElements.18"
+      name="Programmation"/>
+  <processElements
+      xsi:type="simplepdl:WorkDefinition"
+      linksToPredecessors="//@processElements.7 //@processElements.8"
+      linksToAllocator="//@processElements.17 //@processElements.21"
+      name="RedactionTests"/>
+  <processElements
+      xsi:type="simplepdl:WorkSequence"
+      linkType="finishToFinish"
+      predecessor="//@processElements.0"
+      successor="//@processElements.1"/>
+  <processElements
+      xsi:type="simplepdl:WorkSequence"
+      predecessor="//@processElements.0"
+      successor="//@processElements.1"/>
+  <processElements
+      xsi:type="simplepdl:WorkSequence"
+      linkType="finishToStart"
+      predecessor="//@processElements.0"
+      successor="//@processElements.2"/>
+  <processElements
+      xsi:type="simplepdl:WorkSequence"
+      predecessor="//@processElements.0"
+      successor="//@processElements.3"/>
+  <processElements
+      xsi:type="simplepdl:WorkSequence"
+      linkType="finishToFinish"
+      predecessor="//@processElements.2"
+      successor="//@processElements.3"/>
+  <processElements
+      xsi:type="simplepdl:Resource"
+      totalResources="3"
+      name="Concepteur"
+      askedResource="//@processElements.14"/>
+  <processElements
+      xsi:type="simplepdl:Resource"
+      totalResources="1"
+      name="Redacteur"
+      askedResource="//@processElements.15"/>
+  <processElements
+      xsi:type="simplepdl:Resource"
+      totalResources="2"
+      name="Developpeur"
+      askedResource="//@processElements.16"/>
+  <processElements
+      xsi:type="simplepdl:Resource"
+      totalResources="2"
+      name="Testeur"
+      askedResource="//@processElements.17"/>
+  <processElements
+      xsi:type="simplepdl:Resource"
+      totalResources="4"
+      name="Machine"
+      askedResource="//@processElements.18 //@processElements.19 //@processElements.20 //@processElements.21"/>
+  <processElements
+      xsi:type="simplepdl:ResourceAllocator"
+      resourceCost="2"
+      activite="//@processElements.0"
+      resource="//@processElements.9"/>
+  <processElements
+      xsi:type="simplepdl:ResourceAllocator"
+      resourceCost="1"
+      activite="//@processElements.1"
+      resource="//@processElements.10"/>
+  <processElements
+      xsi:type="simplepdl:ResourceAllocator"
+      resourceCost="2"
+      activite="//@processElements.2"
+      resource="//@processElements.11"/>
+  <processElements
+      xsi:type="simplepdl:ResourceAllocator"
+      resourceCost="1"
+      activite="//@processElements.3"
+      resource="//@processElements.12"/>
+  <processElements
+      xsi:type="simplepdl:ResourceAllocator"
+      resourceCost="3"
+      activite="//@processElements.2"
+      resource="//@processElements.13"/>
+  <processElements
+      xsi:type="simplepdl:ResourceAllocator"
+      resourceCost="1"
+      activite="//@processElements.1"
+      resource="//@processElements.13"/>
+  <processElements
+      xsi:type="simplepdl:ResourceAllocator"
+      resourceCost="2"
+      activite="//@processElements.0"
+      resource="//@processElements.13"/>
+  <processElements
+      xsi:type="simplepdl:ResourceAllocator"
+      resourceCost="2"
+      activite="//@processElements.3"
+      resource="//@processElements.13"/>
+</simplepdl:Process>

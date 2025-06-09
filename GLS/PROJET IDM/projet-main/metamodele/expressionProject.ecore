@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="expression" nsURI="http://www.example.org/expression" nsPrefix="expression">
+  <eClassifiers xsi:type="ecore:EClass" name="Expression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="input" upperBound="-1"
+        eType="#//Input"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="output" lowerBound="1"
+        eType="#//Output"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//ExpressionElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Input" eSuperTypes="#//Flux"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Output" eSuperTypes="#//Flux"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Flux" abstract="true" eSuperTypes="#//ExpressionElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpressionElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="input" upperBound="-1"
+        eType="#//ExpressionElement" eOpposite="#//ExpressionElement/output"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="output" eType="#//ExpressionElement"
+        eOpposite="#//ExpressionElement/input"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FonctionBinaire" abstract="true" eSuperTypes="#//ExpressionElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FonctionUnaire" abstract="true" eSuperTypes="#//ExpressionElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FonctionConstante" abstract="true" eSuperTypes="#//ExpressionElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Inverse" eSuperTypes="#//FonctionUnaire"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Cosinus" eSuperTypes="#//FonctionUnaire"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Sinus" eSuperTypes="#//FonctionUnaire"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Oppose" eSuperTypes="#//FonctionUnaire"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Sqrt" eSuperTypes="#//FonctionUnaire"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Exponentielle" eSuperTypes="#//FonctionUnaire"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Addition" eSuperTypes="#//FonctionBinaire"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Multiplication" eSuperTypes="#//FonctionBinaire"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Soustraction" eSuperTypes="#//FonctionBinaire"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Division" eSuperTypes="#//FonctionBinaire"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Max" eSuperTypes="#//FonctionBinaire"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Min" eSuperTypes="#//FonctionBinaire"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Const" eSuperTypes="#//FonctionConstante">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+</ecore:EPackage>

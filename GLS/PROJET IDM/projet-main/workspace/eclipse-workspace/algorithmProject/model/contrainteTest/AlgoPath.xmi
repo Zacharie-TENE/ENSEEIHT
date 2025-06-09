@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithmProject:Algo
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:algorithmProject="http://www.example.org/algorithmProject"
+    name="Positif">
+  <input value="input"/>
+  <ressource
+      path="algorithmProject/positif.pi"/>
+  <output type="bool"
+      value="output"/>
+  <documentation
+      linkToDocumentable="//@input.0"
+      description="AAAAAA"/>
+</algorithmProject:Algo>

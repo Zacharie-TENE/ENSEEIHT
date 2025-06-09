@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tableModel:Tableau xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tableModel="https://www.exemple.org/tableModel" name="banque raw finance" colonneDeLignes="//@colonnes.0">
+  <colonnes name="Date" dataType="int" identifier="banque.finance.raw.date"/>
+  <colonnes name="Open" dataType="float" identifier="banque.finance.raw.open"/>
+  <colonnes name="High" dataType="float" identifier="banque.finance.raw.high"/>
+  <colonnes name="Low" dataType="float" identifier="banque.finance.raw.low"/>
+  <colonnes name="Close" dataType="float" identifier="banque.finance.raw.close"/>
+  <colonnes name="Adj Close" dataType="float" identifier="banque.finance.raw.adjclose"/>
+  <colonnes name="Volume" dataType="float" identifier="banque.finance.raw.volume"/>
+</tableModel:Tableau>

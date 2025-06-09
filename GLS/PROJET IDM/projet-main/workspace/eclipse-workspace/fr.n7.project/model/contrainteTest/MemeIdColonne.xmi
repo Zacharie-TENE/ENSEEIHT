@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tableModel:Tableau
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:tableModel="https://www.exemple.org/tableModel"
+    name="AAA"
+    colonneDeLignes="//@colonnes.0">
+  <colonnes
+      name="Nom"
+      identifier="Id"/>
+  <colonnes
+      name="Nom2"
+      identifier="Id"/>
+</tableModel:Tableau>

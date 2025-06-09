@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated algorithmProject -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="algorithmProject.presentation.AlgorithmProjectModelWizardID"
+            name="%_UI_AlgorithmProjectModelWizard_label"
+            class="algorithmProject.presentation.AlgorithmProjectModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/AlgorithmProjectModelFile.gif">
+         <description>%_UI_AlgorithmProjectModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated algorithmProject -->
+      <editor
+            id="algorithmProject.presentation.AlgorithmProjectEditorID"
+            name="%_UI_AlgorithmProjectEditor_label"
+            icon="icons/full/obj16/AlgorithmProjectModelFile.gif"
+            extensions="algorithmproject"
+            class="algorithmProject.presentation.AlgorithmProjectEditor"
+            contributorClass="algorithmProject.presentation.AlgorithmProjectActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

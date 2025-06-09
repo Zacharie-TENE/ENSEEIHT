@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+
+<simplepdl:Process
+xmi:version="2.0"
+xmlns:xmi="http://www.omg.org/XMI"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:simplepdl="http://simplepdl"
+name="developpement">
+
+ <processElements xsi:type="simplepdl:Guidance" text=""/>
+ <processElements xsi:type="simplepdl:Guidance" text="essai"/>
+ <processElements xsi:type="simplepdl:Guidance" text="            "/>
+
+</simplepdl:Process>

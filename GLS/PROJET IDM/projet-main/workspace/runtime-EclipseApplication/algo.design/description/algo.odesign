@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" name="algo" version="12.0.0.2017041100">
+  <ownedViewpoints name="algoViewpoint" modelFileExtension="algorithmProject">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="AlgoDiagram" domainClass="algorithmProject::Algo" enablePopupBars="true">
+      <metamodel href="file:/home/ztg4419/eclipse-workspace/algorithmProject/model/algorithmProject.ecore#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="NoeudEntree" semanticCandidatesExpression="[self.input/]" domainClass="algorithmProject::Flux">
+          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql:diagram.target.input->indexOf(self) + ' ▶ ' + self.value + ' (' + self.type + ')'" labelPosition="node" resizeKind="NSEW" width="20" height="3">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="NoeudRessource" semanticCandidatesExpression="[self.ressource/]" domainClass="algorithmProject::Ressource">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="[self.path/]" labelPosition="node" resizeKind="NSEW" width="40" height="3">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="NoeudDocumentation" semanticCandidatesExpression="[self.documentation/]" domainClass="algorithmProject::Documentation">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="[self.description/]" labelPosition="node" resizeKind="NSEW" width="20" height="6">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="NoeudSortie" semanticCandidatesExpression="[self.output/]" domainClass="algorithmProject::Flux">
+          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="[self.value + ' (' + self.type + ') ▶'/]" labelPosition="node" resizeKind="NSEW" width="20" height="3">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="ArreteEntree" sourceMapping="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='NoeudEntree']" targetMapping="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='NoeudRessource']" targetFinderExpression="aql:diagram.target.ressource">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ArreteSortie" sourceMapping="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='NoeudRessource']" targetMapping="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='NoeudSortie']" targetFinderExpression="[self.algorithm.output/]">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ArreteDocumentation" sourceMapping="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='NoeudDocumentation']" targetMapping="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='NoeudRessource'] //@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='NoeudEntree'] //@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='NoeudSortie']" targetFinderExpression="[self.linkToDocumentable/]">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="Types">
+          <ownedTools xsi:type="tool:ToolDescription" name="SetInt" label="Designer Int">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[element/]">
+                <subModelOperations xsi:type="tool:SetValue" featureName="type" valueExpression="[DataType::int/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ToolDescription" name="SetString" label="Designer string">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[element/]">
+                <subModelOperations xsi:type="tool:SetValue" featureName="type" valueExpression="[DataType::string/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ToolDescription" name="SetFloat" label="Designer float">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[element/]">
+                <subModelOperations xsi:type="tool:SetValue" featureName="type" valueExpression="[DataType::float/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ToolDescription" name="SetBool" label="Designer bool">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[element/]">
+                <subModelOperations xsi:type="tool:SetValue" featureName="type" valueExpression="[DataType::bool/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Noeuds">
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="InputCreation" label="Creer Input" nodeMappings="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='NoeudEntree']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="algorithmProject::Flux" referenceName="input">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="value" valueExpression="nouvelle entree"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="RessourceCreation" label="Creer Ressource" nodeMappings="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='NoeudRessource']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="algorithmProject::Ressource" referenceName="ressource">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="path" valueExpression="&quot;path vers source&quot;"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="OutputCreation" label="Creer Output" nodeMappings="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='NoeudSortie']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="algorithmProject::Flux" referenceName="output">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="value" valueExpression="nouvelle sortie"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Documentation" icon="algorithmProject::Documentation">
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="DocumentationNode" label="Creer Documentation" nodeMappings="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@nodeMappings[name='NoeudDocumentation']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="algorithmProject::Documentation" referenceName="documentation">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="description" valueExpression="nouveaucommentaire"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:EdgeCreationDescription" name="DocLinkCreation" label="Documenter" edgeMappings="//@ownedViewpoints[name='algoViewpoint']/@ownedRepresentations[name='AlgoDiagram']/@defaultLayer/@edgeMappings[name='ArreteDocumentation']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[source/]">
+                <subModelOperations xsi:type="tool:SetValue" featureName="linkToDocumentable" valueExpression="[target/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="algo.design.Services"/>
+  </ownedViewpoints>
+</description:Group>

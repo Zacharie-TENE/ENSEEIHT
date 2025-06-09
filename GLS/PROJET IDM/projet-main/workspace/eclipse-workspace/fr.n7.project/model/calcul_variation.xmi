@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<algorithmProject:Algo xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:algorithmProject="http://www.example.org/algorithmProject" name="calcul_variation">
+  <input type="float" value="debut"/>
+  <input type="float" value="fin"/>
+  <ressource path="&quot;/home/ztg4419/eclipse-workspace/Expression2Python/variation.py&quot;"/>
+  <output type="float" value="return"/>
+</algorithmProject:Algo>

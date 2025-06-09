@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/algorithmProject/src" modelPluginID="algorithmProject"
+    modelName="AlgorithmProject" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="17.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>algorithmProject.ecore</foreignModel>
+  <genPackages prefix="AlgorithmProject" disposableProviderFactory="true" ecorePackage="algorithmProject.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="algorithmProject.ecore#//DataType">
+      <genEnumLiterals ecoreEnumLiteral="algorithmProject.ecore#//DataType/string"/>
+      <genEnumLiterals ecoreEnumLiteral="algorithmProject.ecore#//DataType/int"/>
+      <genEnumLiterals ecoreEnumLiteral="algorithmProject.ecore#//DataType/float"/>
+      <genEnumLiterals ecoreEnumLiteral="algorithmProject.ecore#//DataType/bool"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="algorithmProject.ecore#//Documentable"/>
+    <genClasses ecoreClass="algorithmProject.ecore#//Documentation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference algorithmProject.ecore#//Documentation/linkToDocumentable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithmProject.ecore#//Documentation/description"/>
+    </genClasses>
+    <genClasses ecoreClass="algorithmProject.ecore#//Ressource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithmProject.ecore#//Ressource/path"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference algorithmProject.ecore#//Ressource/algorithm"/>
+    </genClasses>
+    <genClasses ecoreClass="algorithmProject.ecore#//Algo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithmProject.ecore#//Algo/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference algorithmProject.ecore#//Algo/input"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference algorithmProject.ecore#//Algo/ressource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference algorithmProject.ecore#//Algo/output"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference algorithmProject.ecore#//Algo/documentation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithmProject.ecore#//Algo/isConstraints"/>
+    </genClasses>
+    <genClasses ecoreClass="algorithmProject.ecore#//Flux">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithmProject.ecore#//Flux/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute algorithmProject.ecore#//Flux/value"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

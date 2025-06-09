@@ -1,0 +1,186 @@
+{
+	"Tableau": {
+		"name": "banque finance",
+		"colonneReference": {
+			"name": "Date",
+			"id": "banque.finance.date",
+			"type": "float"
+		},
+		"colonnes": [ 
+			{
+				"name": "Date",
+				"type": "float",
+				"id": "banque.finance.date",
+				"contraintes": {"NULL": "null"},
+				"constraints": {"NULL": "null"},
+				"colonneType": {
+					"tableauIN": "banque raw finance",
+					"idColonne": "banque.finance.raw.date"
+				}
+			}
+,			{
+				"name": "Ouverture",
+				"type": "float",
+				"id": "banque.finance.ouverture",
+				"contraintes": [
+					"DOIT_ETRE_POSITIF"
+,					"CUSTOM"
+				],
+				"constraints": {"NULL": "null"},
+				"colonneType": {
+					"tableauIN": "banque raw finance",
+					"idColonne": "banque.finance.raw.open"
+				}
+			}
+,			{
+				"name": "Min",
+				"type": "float",
+				"id": "banque.finance.min",
+				"contraintes": [
+					"DOIT_ETRE_POSITIF"
+				],
+		        "constraints": {"NULL": "null"},
+					],
+				"colonneType": {
+					"tableauIN": "banque raw finance",
+					"idColonne": "banque.finance.raw.low"
+				}
+			}
+,			{
+				"name": "Max",
+				"type": "float",
+				"id": "banque.finance.max",
+				"contraintes": [
+					"DOIT_ETRE_POSITIF"
+				],
+		        "constraints": {"NULL": "null"},
+				"colonneType": {
+					"tableauIN": "banque raw finance",
+					"idColonne": "banque.finance.raw.high"
+				}
+			}
+,			{
+				"name": "Fermeture",
+				"type": "float",
+				"id": "banque.finance.fermeture",
+				"contraintes": [
+					"DOIT_ETRE_POSITIF"
+				],
+				"constraints": [
+					 {
+						"name":"Positif",
+						"input": "input",
+						"path": algorithmProject/positif.py,
+						"documentations": {
+						}
+				}
+					],
+				"colonneType": {
+					"tableauIN": "banque raw finance",
+					"idColonne": "banque.finance.raw.close"
+				}
+			}
+,			{
+				"name": "Volume",
+				"type": "float",
+				"id": "banque.finance.volume",
+				"contraintes": [
+					"DOIT_ETRE_POSITIF"
+				],
+				"constraints": {"NULL": "null"},
+				"colonneType": {
+					"tableauIN": "banque raw finance",
+					"idColonne": "banque.finance.raw.volume"
+				}
+			}
+,			{
+				"name": "Moyenne",
+				"type": "float",
+				"id": "banque.finance.moyenne",
+				"contraintes": {"NULL": "null"},
+				"constraints": {"NULL": "null"},
+				"colonneType": {
+					"colonneIN": [
+						{
+							"name": "Min",
+							"identifier": "banque.finance.min"
+						}
+,						{
+							"name": "Max",
+							"identifier": "banque.finance.max"
+						}
+					],
+					"algorithm": [
+						{
+							"name": "input",
+							"type": "float",
+							"value": "nouvelle entree"
+						},
+						{
+							"name": "input",
+							"type": "float",
+							"value": "nouvelle entree"
+						},
+						{
+							"name": "output",
+							"type": "float",
+							"value": "nouvelle sortie"
+						},
+						{
+							"name": "path",
+							"path": "/home/omi1819/Annee_2/PrIDM/ExpressionToPython/moyenne.py"
+						},
+						{
+							"name": "documentation",
+							"NULL": "null"
+						}
+					]
+				}
+			}
+,			{
+				"name": "Variation",
+				"type": "float",
+				"id": "banque.finance.variation",
+				"contraintes": {"NULL": "null"},
+				"constraints": {"NULL": "null"},
+				"colonneType": {
+					"colonneIN": [
+						{
+							"name": "Fermeture",
+							"identifier": "banque.finance.fermeture"
+						}
+,						{
+							"name": "Ouverture",
+							"identifier": "banque.finance.ouverture"
+						}
+					],
+					"algorithm": [
+						{
+							"name": "input",
+							"type": "float",
+							"value": "debut"
+						},
+						{
+							"name": "input",
+							"type": "float",
+							"value": "fin"
+						},
+						{
+							"name": "output",
+							"type": "float",
+							"value": "return"
+						},
+						{
+							"name": "path",
+							"path": "/home/omi1819/Annee_2/PrIDM/ExpressionToPython/variation.py"
+						},
+						{
+							"name": "documentation",
+							"NULL": "null"
+						}
+					]
+				}
+			}
+		]
+	}
+}

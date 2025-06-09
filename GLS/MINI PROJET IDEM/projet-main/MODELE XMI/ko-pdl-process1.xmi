@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ASCII"?>
+<simplepdl:Process
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:simplepdl="http://simplepdl"
+    name="developpement">
+  <processElements
+      xsi:type="simplepdl:WorkDefinition"
+      name="@m"/>
+  <processElements
+      xsi:type="simplepdl:WorkDefinition"
+      name="8djk"/>
+  <processElements
+      xsi:type="simplepdl:Resource"
+      name="doublon"/>
+  <processElements
+      xsi:type="simplepdl:Resource"
+      name="doublon"/>
+  <processElements
+      xsi:type="simplepdl:Resource"
+      name="wdRessource"/>
+  <processElements
+      xsi:type="simplepdl:WorkDefinition"
+      name="wdRessource"/>
+  <processElements
+      xsi:type="simplepdl:WorkDefinition"
+      name="q"/>
+</simplepdl:Process>

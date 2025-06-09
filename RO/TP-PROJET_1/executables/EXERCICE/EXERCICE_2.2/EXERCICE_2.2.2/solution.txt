@@ -1,0 +1,87 @@
+Problem:    casparticulier1
+Rows:       23
+Columns:    18 (6 integer, 6 binary)
+Non-zeros:  66
+Status:     INTEGER OPTIMAL
+Objective:  TotalCost = 354 (MINimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 SatisfaireDemande[D1,F1]
+                                   2             2             = 
+     2 SatisfaireDemande[D1,F2]
+                                   0            -0             = 
+     3 SatisfaireDemande[D2,F1]
+                                   1             1             = 
+     4 SatisfaireDemande[D2,F2]
+                                   3             3             = 
+     5 RespecterStock[M1,F1]
+                                   1                         2.5 
+     6 RespecterStock[M1,F2]
+                                   1                           1 
+     7 RespecterStock[M2,F1]
+                                   0                           1 
+     8 RespecterStock[M2,F2]
+                                   2                           2 
+     9 RespecterStock[M3,F1]
+                                   2                           2 
+    10 RespecterStock[M3,F2]
+                                   0                           1 
+    11 LienQuantiteEtDesserte[M1,D1,F1]
+                                   0                          -0 
+    12 LienQuantiteEtDesserte[M1,D1,F2]
+                                   0                          -0 
+    13 LienQuantiteEtDesserte[M1,D2,F1]
+                                  -3                          -0 
+    14 LienQuantiteEtDesserte[M1,D2,F2]
+                                  -3                          -0 
+    15 LienQuantiteEtDesserte[M2,D1,F1]
+                                   0                          -0 
+    16 LienQuantiteEtDesserte[M2,D1,F2]
+                                   0                          -0 
+    17 LienQuantiteEtDesserte[M2,D2,F1]
+                                  -4                          -0 
+    18 LienQuantiteEtDesserte[M2,D2,F2]
+                                  -2                          -0 
+    19 LienQuantiteEtDesserte[M3,D1,F1]
+                                   0                          -0 
+    20 LienQuantiteEtDesserte[M3,D1,F2]
+                                  -2                          -0 
+    21 LienQuantiteEtDesserte[M3,D2,F1]
+                                   0                          -0 
+    22 LienQuantiteEtDesserte[M3,D2,F2]
+                                   0                          -0 
+    23 TotalCost                 354                             
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 x[M1,F1,D1]                 0             0               
+     2 x[M2,F1,D1]                 0             0               
+     3 x[M3,F1,D1]                 2             0               
+     4 x[M1,F2,D1]                 0             0               
+     5 x[M2,F2,D1]                 0             0               
+     6 x[M3,F2,D1]                 0             0               
+     7 x[M1,F1,D2]                 1             0               
+     8 x[M2,F1,D2]                 0             0               
+     9 x[M3,F1,D2]                 0             0               
+    10 x[M1,F2,D2]                 1             0               
+    11 x[M2,F2,D2]                 2             0               
+    12 x[M3,F2,D2]                 0             0               
+    13 y[M1,D1]     *              0             0             1 
+    14 y[M1,D2]     *              1             0             1 
+    15 y[M2,D1]     *              0             0             1 
+    16 y[M2,D2]     *              1             0             1 
+    17 y[M3,D1]     *              1             0             1 
+    18 y[M3,D2]     *              0             0             1 
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output

@@ -1,0 +1,82 @@
+-- @path SimplePDL=/simplePDL/SimplePDL.ecore
+-- @path PN=/fr.n7.petriNet/PetriNet.ecore
+
+module SimplePDL2PetriNet;
+create OUT : PN from IN : SimplePDL;
+
+helper context SimplePDL!ProcessElement
+def: getProcess() : SimplePDL!Process =
+	SimplePDL!Process.allInstances()->select(e | e.processElements->includes(self));
+
+rule Process2PetriNet {
+	from process : SimplePDL!Process
+	
+	to petri : PN!PetriNet(name <- process.name, petriNetElements <- process.processElements)
+}
+
+
+rule WD2PlaceANDTransition {
+	from wd : SimplePDL!WorkDefinition
+	
+	to 
+	   place_ready : PN!Place(name <- wd.name + '_ready', numJetons <- 1, petriNet <- wd.getProcess()),
+	   place_running : PN!Place(name <- wd.name + '_running', numJetons <- 0, petriNet <- wd.getProcess()),
+	   place_started : PN!Place(name <- wd.name + 'started', numJetons <- 0, petriNet <- wd.getProcess()),
+	   place_finished : PN!Place(name <- wd.name + 'finished', numJetons <- 0, petriNet <- wd.getProcess()),
+	   
+	   transition_start : PN!Transition(name <- 'transition_start' + wd.name, petriNet <- wd.getProcess()),
+	   transition_finish : PN!Transition(name <- 'transition_finish' + wd.name, petriNet <- wd.getProcess()),
+	   
+	   arc1 : PN!Arc(name <- 'ReadyToTransitionStart' + wd.name, source <- place_ready, destination <- transition_start, weight <- 1, type <- #normal, petriNet <- wd.getProcess()),
+	   arc2 : PN!Arc(name <- 'TransitionStartToRunning' + wd.name, source <- transition_start, destination <- place_running, weight <- 1, type <- #normal, petriNet <- wd.getProcess()),
+	   arc3 : PN!Arc(name <- 'RunningToTransitionFinish' + wd.name, source <- place_running, destination <- transition_finish, weight <- 1, type <- #normal, petriNet <- wd.getProcess()),
+	   arc4 : PN!Arc(name <- 'TransitionFinishToFinished' + wd.name, source <- transition_finish, destination <- place_finished, weight <- 1, type <- #normal, petriNet <- wd.getProcess()),
+	   arc5 : PN!Arc(name <- 'TransitionStartToStarted' + wd.name, source <- transition_start, destination <- place_started, weight <- 1, type <- #normal, petriNet <- wd.getProcess())
+	   
+}
+
+rule WS2Arc {
+	from ws : SimplePDL!WorkSequence
+	
+	to 	
+		arc : PN!Arc(
+		source <- thisModule.resolveTemp(ws.predecessor, 'place_'+
+			if ws.linkType = #startToStart or ws.linkType = #startToFinish then
+				'started'
+			else
+				'finished'
+			endif),
+		destination <- thisModule.resolveTemp(ws.successor, 'transition_'+
+			if ws.linkType = #startToStart or ws.linkType = #finishToStart then
+				'start'
+			else
+				'finish'
+			endif),
+		weight <- 1,
+		type <- #readArc,
+		petriNet <- ws.getProcess(),
+		name <- (thisModule.resolveTemp(ws.predecessor, 'place_'+
+			if ws.linkType = #startToStart or ws.linkType = #startToFinish then
+				'started'
+			else
+				'finished'
+			endif)).name + 'To' + (thisModule.resolveTemp(ws.successor, 'place_'+
+			if ws.linkType = #startToStart or ws.linkType = #finishToStart then
+				'started'
+			else
+				'finished'
+			endif)).name)
+}
+
+rule Resource2Place {
+	from res : SimplePDL!Resource
+	
+	to place_res : PN!Place(name <- res.name, numJetons <- res.totalResources, petriNet <- res.getProcess())
+}
+
+rule ResourceAllocator2Arc {
+	from ra : SimplePDL!ResourceAllocator
+	
+	to arcGiveRes : PN!Arc(name <- 'GiveResourceFrom' + ra.resource.name + 'To' + ra.activite.name, source <- ra.resource, destination <- thisModule.resolveTemp(ra.activite, 'transition_start'), weight <- ra.resourceCost, type <- #normal, petriNet <- ra.getProcess()),
+	arcGiveBackres : PN!Arc(name <- 'GiveBackResourceFrom' + ra.activite.name + 'To' + ra.resource.name, source <- thisModule.resolveTemp(ra.activite, 'transition_finish'), destination <- ra.resource, weight <- ra.resourceCost, type <- #normal, petriNet <- ra.getProcess())
+}

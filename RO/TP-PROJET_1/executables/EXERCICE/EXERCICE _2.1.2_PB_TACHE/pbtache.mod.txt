@@ -1,0 +1,30 @@
+###############################  Model ###############################
+
+# Affectation avec prise en compte des préférences (exercice 2.1.2)
+
+
+###############################  Sets  ###############################
+set PERSONNES;  # Ensemble des personnes (P1, P2, ..., PN)
+set TACHES;     # Ensemble des tâches (T1, T2, ..., TN)
+
+###############################  Params  ###############################
+param preferences{i in PERSONNES, j in TACHES};  # Score de préférence de chaque personne pour chaque tâche,Matrice C
+
+################### Variables ###################
+var x{i in PERSONNES, j in TACHES}, binary;  # 1 si la personne i effectue la tâche j, sinon 0, Matrice X 
+
+###### Objective ######
+maximize TotalPreferences:
+    sum{i in PERSONNES, j in TACHES} preferences[i, j] * x[i, j];
+
+################### Constraints ###################
+# Chaque personne doit effectuer exactement une tâche
+s.t. UneTacheParPersonne{i in PERSONNES}:
+    sum{j in TACHES} x[i, j] = 1;
+
+#  Chaque tâche doit être effectuée par exactement une personne
+s.t. UnePersonneParTache{j in TACHES}:
+    sum{i in PERSONNES} x[i, j] = 1;
+    
+end;
+

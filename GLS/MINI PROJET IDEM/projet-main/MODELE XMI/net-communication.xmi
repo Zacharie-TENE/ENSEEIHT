@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<petrinet:PetriNet
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:petrinet="http://petrinet"
+    xsi:schemaLocation="http://petrinet PetriNet.ecore"
+  name="ProtocoleCommunication">
+  <petriNetElements xsi:type="petrinet:Place" name="MessageAEnvoyer" numJetons="1"/>
+  <petriNetElements xsi:type="petrinet:Transition" name="EnvoyerMessage"/>
+  <petriNetElements xsi:type="petrinet:Place" name="MessageEnTransit" numJetons="0"/>
+  <petriNetElements xsi:type="petrinet:Transition" name="RecevoirMessage"/>
+  <petriNetElements xsi:type="petrinet:Place" name="MessageRecu" numJetons="0"/>
+  <petriNetElements xsi:type="petrinet:Transition" name="EnvoyerAccuseReception"/>
+  <petriNetElements xsi:type="petrinet:Place" name="AccuseReceptionEnTransit" numJetons="0"/>
+  <petriNetElements xsi:type="petrinet:Transition" name="RecevoirAccuseReception"/>
+  <petriNetElements xsi:type="petrinet:Place" name="CommunicationTerminee" numJetons="0"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.0" destination="//@petriNetElements.1" weight="1" name="PrepareMessage"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.1" destination="//@petriNetElements.2" weight="1" name="MessageEnvoye"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.2" destination="//@petriNetElements.3" weight="1" name="MessageArrive"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.3" destination="//@petriNetElements.4" weight="1" name="MessageTraite"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.4" destination="//@petriNetElements.5" weight="1" name="PrepareAccuseReception"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.5" destination="//@petriNetElements.6" weight="1" name="AccuseReceptionEnvoye"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.6" destination="//@petriNetElements.7" weight="1" name="AccuseReceptionArrive"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.7" destination="//@petriNetElements.8" weight="1" name="FinCommunication"/>
+</petrinet:PetriNet>

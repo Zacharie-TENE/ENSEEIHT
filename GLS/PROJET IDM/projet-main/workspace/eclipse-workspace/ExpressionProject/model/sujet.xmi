@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<expression:Expression
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:expression="http://www.example.org/expression"
+    name="MaxMinAddDiv"
+    output="//@elements.9">
+  <elements
+      xsi:type="expression:Max"
+      input="//@elements.2 //@elements.1"
+      output="//@elements.6"/>
+  <elements
+      xsi:type="expression:Input"
+      output="//@elements.0"
+      name="A"/>
+  <elements
+      xsi:type="expression:Input"
+      output="//@elements.0"
+      name="B"/>
+  <elements
+      xsi:type="expression:Min"
+      input="//@elements.4 //@elements.5"
+      output="//@elements.6"/>
+  <elements
+      xsi:type="expression:Input"
+      output="//@elements.3"
+      name="C"/>
+  <elements
+      xsi:type="expression:Input"
+      output="//@elements.3"
+      name="D"/>
+  <elements
+      xsi:type="expression:Addition"
+      input="//@elements.0 //@elements.3"
+      output="//@elements.7"/>
+  <elements
+      xsi:type="expression:Division"
+      input="//@elements.6 //@elements.8"
+      output="//@elements.9"/>
+  <elements
+      xsi:type="expression:Const"
+      output="//@elements.7"
+      value="2.0"/>
+  <elements
+      xsi:type="expression:Output"
+      input="//@elements.7"
+      name="Out"/>
+</expression:Expression>

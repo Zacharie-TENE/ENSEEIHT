@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated expressionProject -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="expression.presentation.ExpressionModelWizardID"
+            name="%_UI_ExpressionModelWizard_label"
+            class="expression.presentation.ExpressionModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ExpressionModelFile.gif">
+         <description>%_UI_ExpressionModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated expressionProject -->
+      <editor
+            id="expression.presentation.ExpressionEditorID"
+            name="%_UI_ExpressionEditor_label"
+            icon="icons/full/obj16/ExpressionModelFile.gif"
+            extensions="expression"
+            class="expression.presentation.ExpressionEditor"
+            contributorClass="expression.presentation.ExpressionActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

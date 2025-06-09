@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ASCII"?>
+<expression:Expression
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:expression="http://www.example.org/expression"
+    name="variation"
+    input="//@elements.0 //@elements.1"
+    output="//@elements.3">
+  <elements
+      xsi:type="expression:Input"
+      output="//@elements.2"
+      name="fin"/>
+  <elements
+      xsi:type="expression:Input"
+      output="//@elements.2"
+      name="debut"/>
+  <elements
+      xsi:type="expression:Soustraction"
+      input="//@elements.0 //@elements.1"
+      output="//@elements.3"/>
+  <elements
+      xsi:type="expression:Output"
+      input="//@elements.2"
+      name="return"/>
+</expression:Expression>

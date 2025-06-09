@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<algorithmProject:Algo xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:algorithmProject="http://www.example.org/algorithmProject" name="calcul_moyenne">
+  <input type="float" value="nouvelle entree"/>
+  <input type="float" value="nouvelle entree"/>
+  <ressource path="&quot;/home/omi1819/Annee_2/PrIDM/ExpressionToPython/moyenne.py&quot;"/>
+  <output type="float" value="nouvelle sortie"/>
+</algorithmProject:Algo>

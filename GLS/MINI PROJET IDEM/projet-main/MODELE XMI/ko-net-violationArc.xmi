@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<petrinet:PetriNet
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:petrinet="http://petrinet"
+    name="violationArc">
+  <petriNetElements
+      xsi:type="petrinet:Place"
+      name="ProduitAControler"
+      successors="//@petriNetElements.2"
+      numJetons="1"/>
+  <petriNetElements
+      xsi:type="petrinet:Place"
+      name="NormesQualite"
+      predecessors="//@petriNetElements.2"
+      numJetons="1"/>
+  <petriNetElements
+      xsi:type="petrinet:Arc"
+      name="ArcInvalide"
+      source="//@petriNetElements.0"
+      destination="//@petriNetElements.1"
+      weight="1"/>
+  <petriNetElements
+      xsi:type="petrinet:Transition"
+      name="T1"
+      successors="//@petriNetElements.5"/>
+  <petriNetElements
+      xsi:type="petrinet:Transition"
+      name="T2"
+      predecessors="//@petriNetElements.5"/>
+  <petriNetElements
+      xsi:type="petrinet:Arc"
+      name="ArcInvalide2"
+      source="//@petriNetElements.3"
+      destination="//@petriNetElements.4"/>
+</petrinet:PetriNet>

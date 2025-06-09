@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tableModel:Tableau xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tableModel="https://www.exemple.org/tableModel" name="tableau" colonneDeLignes="//@colonnes.0">
+  <colonnes/>
+  <colonnes identifier="banque">
+    <constraints href="AlgoPos.xmi#/"/>
+    <contrainte>DOIT_ETRE_POSITIF</contrainte>
+  </colonnes>
+  <colonnes>
+    <colonneType xsi:type="tableModel:ImportationTableau" identifiantColonne="">
+      <tableau href="banque_finance.xmi#/"/>
+    </colonneType>
+  </colonnes>
+</tableModel:Tableau>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ASCII"?>
+<expression:Expression xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:expression="http://www.example.org/expression" name="moyenne" input="//@elements.0 //@elements.1" output="//@elements.5">
+  <elements xsi:type="expression:Input" output="//@elements.2" name="val_min"/>
+  <elements xsi:type="expression:Input" output="//@elements.2" name="val_max"/>
+  <elements xsi:type="expression:Addition" input="//@elements.0 //@elements.1" output="//@elements.3"/>
+  <elements xsi:type="expression:Division" input="//@elements.2 //@elements.4" output="//@elements.5"/>
+  <elements xsi:type="expression:Const" output="//@elements.3" value="2.0"/>
+  <elements xsi:type="expression:Output" input="//@elements.3" name="Output"/>
+</expression:Expression>

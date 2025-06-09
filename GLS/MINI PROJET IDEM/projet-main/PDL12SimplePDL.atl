@@ -1,0 +1,46 @@
+-- @path SimplePDL=file:/home/vod1897/eclipse-workspace/simplePDL/SimplePDL.ecore
+-- @path PDL1=file:/home/vod1897/runtime-EclipseApplication/fr.n7.pdl1/model/generated/PDL1.ecore
+
+module PDL12SimplePDL;
+create OUT : SimplePDL from IN : PDL1;
+
+helper def : 
+	getProcess() : SimplePDL!Process = SimplePDL!Process.allInstances()->first();
+
+rule PDLProcessToSimpleProcess {
+	from processPDL : PDL1!Process
+	to processSimple : SimplePDL!Process(name <- processPDL.name)
+}
+
+rule PDLWDToSimpleWD {
+	from wdPDL : PDL1!WorkDefinition
+	to wdSimple : SimplePDL!WorkDefinition(name <- wdPDL.name, process <- thisModule.getProcess())
+}
+
+rule PDLWSToSimpleWS {
+	from wsPDL : PDL1!WorkSequence
+	to wsSimple : SimplePDL!WorkSequence(successor <- wsPDL.successor, predecessor <- wsPDL.predecessor, process <- thisModule.getProcess(),
+					linkType <- 
+				if wsPDL.linkType = #s2s then #startToStart 
+				else if wsPDL.linkType = #s2f then #startToFinish 
+					else if wsPDL.linkType = #f2s then #finishToStart 
+						else #finishToFinish 
+						endif 
+					endif 
+				endif)
+}
+
+rule PDLGuidanceToSimpleGuidance {
+	from guidancePDL : PDL1!Guidance
+	to guidanceSimple : SimplePDL!Guidance(text <- guidancePDL.text, elements <- guidancePDL.elements, process <- thisModule.getProcess())
+}
+
+rule PDLRAToSimpleRA {
+	from raPDL : PDL1!ResourceAllocator
+	to raSimple : SimplePDL!ResourceAllocator(resourceCost <- raPDL.resourceCost, activite <- raPDL.activite, resource <- raPDL.resource, process <- thisModule.getProcess())
+}
+
+rule PDLResToSimpleRes {
+	from resPDL : PDL1!Resource
+	to resSimple : SimplePDL!Resource(name <- resPDL.name, totalResources <- resPDL.totalResources, process <- thisModule.getProcess())
+}

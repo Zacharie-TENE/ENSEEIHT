@@ -1,0 +1,42 @@
+###############################  Model ###############################
+#cas particulier 1.1
+###############################  Sets  ###############################
+
+set MAGASINS;
+set FLUIDES;
+set COMMANDES;
+
+################### Variables ###################
+
+# Quantité de fluide j fourni par le magasin i pour la commande k
+var x{i in MAGASINS, j in FLUIDES, k in COMMANDES} >= 0;
+
+###################  Constants: Data to load   #########################
+
+# Cout de la livraison de fluide j par magasin i
+param C{i in MAGASINS, j in FLUIDES};
+
+# Stock de fluide j disponible au magasin i
+param S{i in MAGASINS, j in FLUIDES};
+
+# Demande de fluide j lors de la commande k
+param D{k in COMMANDES, j in FLUIDES};
+
+################### Constraints ###################
+
+#chaque commande doit être satisfaite
+s.t. SatisfaireDemande{k in COMMANDES, j in FLUIDES}:
+  sum{i in MAGASINS} x[i, j, k] = D[k, j];
+
+# dans la limite du stock des magasins
+s.t. RespecterStock{i in MAGASINS, j in FLUIDES}:
+  sum{k in COMMANDES} x[i, j, k] <= S[i, j];
+
+###### Objective ######
+
+# Minimiser le cout total de la livraison ,notre fonction objectif
+minimize TotalCost:
+  sum{i in MAGASINS, j in FLUIDES, k in COMMANDES} C[i, j] * x[i, j, k];
+
+######################### End of Model ##############################
+

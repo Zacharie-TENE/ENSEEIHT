@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fr.n7.project/src" modelPluginID="fr.n7.project"
+    modelName="TableProject" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="17.0" copyrightFields="false"
+    usedGenPackages="../../algorithmProject/model/algorithmProject.genmodel#//algorithmProject"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>tableProject.ecore</foreignModel>
+  <genPackages prefix="TableModel" disposableProviderFactory="true" ecorePackage="tableProject.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tableProject.ecore#//contrainte">
+      <genEnumLiterals ecoreEnumLiteral="tableProject.ecore#//contrainte/DOIT_ETRE_NEGATIF"/>
+      <genEnumLiterals ecoreEnumLiteral="tableProject.ecore#//contrainte/DOIT_ETRE_POSITIF"/>
+      <genEnumLiterals ecoreEnumLiteral="tableProject.ecore#//contrainte/NON_NUL"/>
+      <genEnumLiterals ecoreEnumLiteral="tableProject.ecore#//contrainte/CUSTOM"/>
+    </genEnums>
+    <genClasses ecoreClass="tableProject.ecore#//Tableau">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tableProject.ecore#//Tableau/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tableProject.ecore#//Tableau/colonneDeLignes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tableProject.ecore#//Tableau/colonnes"/>
+    </genClasses>
+    <genClasses ecoreClass="tableProject.ecore#//Colonne">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tableProject.ecore#//Colonne/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tableProject.ecore#//Colonne/dataType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tableProject.ecore#//Colonne/identifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tableProject.ecore#//Colonne/constraints"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference tableProject.ecore#//Colonne/tableau"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tableProject.ecore#//Colonne/colonneType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tableProject.ecore#//Colonne/contrainte"/>
+    </genClasses>
+    <genClasses ecoreClass="tableProject.ecore#//ImportationTableau">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tableProject.ecore#//ImportationTableau/identifiantColonne"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tableProject.ecore#//ImportationTableau/tableau"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="tableProject.ecore#//ColonneType">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference tableProject.ecore#//ColonneType/colonne"/>
+    </genClasses>
+    <genClasses ecoreClass="tableProject.ecore#//ImportationAlgo">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tableProject.ecore#//ImportationAlgo/ColonneIN"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tableProject.ecore#//ImportationAlgo/algorithm"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

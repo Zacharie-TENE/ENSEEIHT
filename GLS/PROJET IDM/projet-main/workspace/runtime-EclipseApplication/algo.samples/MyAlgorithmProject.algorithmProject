@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ASCII"?>
+<algorithmProject:Algo xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:algorithmProject="http://www.example.org/algorithmProject">
+  <input value="nouvelle entree"/>
+  <ressource path="&quot;path vers source&quot;"/>
+  <documentation description="nouveaucommentaire"/>
+</algorithmProject:Algo>

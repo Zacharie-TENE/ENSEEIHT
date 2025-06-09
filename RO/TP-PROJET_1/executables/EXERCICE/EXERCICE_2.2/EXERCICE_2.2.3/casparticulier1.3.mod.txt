@@ -1,0 +1,38 @@
+# GLPK model file by SUN for RO teaching
+
+
+###############################  Model ###############################
+
+###################  Constants: Data to load   #########################
+
+param N; #Taille de la matrice
+param M; #Coeficient pour faciliter la convergence
+param DISTANCE{i in 1..N, j in 1..N}, integer; #Matrice des distances
+
+#Variable binaire qui vaut 1 si le livreur va du client i vers le client j et 0 sinon
+var Y{i in 1..N, j in 1..N}, binary;
+#Variable pour gérer les sous-tours
+var T{i in 1..N}, integer;
+
+#Fonction objectif à minimiser
+minimize Distance:
+    sum{i in 1..N, j in 1..N} DISTANCE[i,j] * Y[i,j];
+
+#Contrainte:
+#Pas plus de 1 élement par colonne égale à 1 pour empêcher le livreur d'aller chez 2 clients en même temps
+s.t. RegleUn{i in 1..N}:
+    sum{j in 1..N} Y[i,j] = 1;
+#Pas plus de 1 élement par ligne égale à 1 pour le livreur de revenir chez le même client
+s.t. RegleDeux{j in 1..N}:
+    sum{i in 1..N} Y[i,j] = 1;
+#On empêche le livreur de boucler sur le même client
+s.t. RegleTrois{i in 1..N}:
+    Y[i,i] = 0;
+#Contrainte pour éviter les sous-tours
+s.t. RegleQuatre{i in 1..N, j in 2..N}:
+     T[j] +(1-Y[i,j])*N >= T[i] +1;
+#Borne inférieur de la variable T
+s.t. Reglex{i in 1..N}:
+    T[i] >=0;
+
+end;

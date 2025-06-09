@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<petrinet:PetriNet
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:petrinet="http://petrinet"
+    xsi:schemaLocation="http://petrinet PetriNet.ecore"
+    name="1InvalidName">  <!-- Nom du PetriNet non conforme -->
+  <petriNetElements xsi:type="petrinet:Place" name="P1" numJetons="1"/>
+  <petriNetElements xsi:type="petrinet:Place" name="P1" numJetons="2"/>  <!-- Place avec nom identique -->
+  <petriNetElements xsi:type="petrinet:Place" name="InvalidPlace" numJetons="-1"/>  <!-- numJetons négatif -->
+  <petriNetElements xsi:type="petrinet:Transition" name="T1"/>
+  <petriNetElements xsi:type="petrinet:Transition" name="T1"/>  <!-- Transition avec nom identique -->
+  <petriNetElements xsi:type="petrinet:Place" name="CommonName" numJetons="0"/>
+  <petriNetElements xsi:type="petrinet:Transition" name="CommonName"/>  <!-- Place et transition avec le même nom -->
+  <petriNetElements xsi:type="petrinet:Place" name="1" numJetons="1"/>  <!-- Nom ne respectant pas la règle -->
+  <petriNetElements xsi:type="petrinet:Transition" name="T"/>  <!-- Nom ne respectant pas la règle -->
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.0" destination="//@petriNetElements.3" weight="0" name="InvalidWeightArc"/>  <!-- Poids d'arc invalide -->
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.1" destination="//@petriNetElements.4" weight="1" name="ValidArc"/>
+</petrinet:PetriNet>

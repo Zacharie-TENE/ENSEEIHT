@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="expression" version="12.0.0.2017041100">
+  <ownedViewpoints name="ExpressionViewpoint" modelFileExtension="expression">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="ExpressionDiagram" domainClass="expression::Expression" enablePopupBars="true">
+      <metamodel href="file:/home/ztg4419/eclipse-workspace/ExpressionProject/model/expressionProject.ecore#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="NoeudExpression" semanticCandidatesExpression="[self.elements/]" domainClass="expression::ExpressionElement">
+          <conditionnalStyles predicateExpression="[self.oclIsKindOf(Const)/]">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="feature:value" labelPosition="node" resizeKind="NSEW" width="7" height="7">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.oclIsKindOf(Input)/]">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql:diagram.target.input->indexOf(self) + ' ▶ ' + self.name" labelPosition="node" resizeKind="NSEW" width="10" height="5">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[true/]">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="[self.eClass().name/]" labelPosition="node" resizeKind="NSEW" width="15" height="10">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.oclIsKindOf(Output) and container.output=self/]">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="[self.name+'▶'/]" labelPosition="node" resizeKind="NSEW" width="15" height="5">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.oclIsKindOf(Output) and container.output&lt;>self/]">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="[self.name+'▶'/]" labelPosition="node" resizeKind="NSEW" width="10" height="5">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+        <edgeMappings name="ArreteExpression" deletionDescription="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@toolSections.3/@ownedTools[name='']" sourceMapping="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='NoeudExpression']" targetMapping="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='NoeudExpression']" targetFinderExpression="[self.output/]">
+          <style sizeComputationExpression="2" centeredTargetMappings="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='NoeudExpression']">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="[self.output.input->indexOf(self)/]">
+              <labelFormat>italic</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="Binaire" label="Fonction Binaire">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="AdditionCreation" label="Create Addition" nodeMappings="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='NoeudExpression']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="expression::Addition" referenceName="elements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="SoustractionCreation" label="Create Soustraction" nodeMappings="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='NoeudExpression']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="expression::Soustraction" referenceName="elements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="MultiplicationCreation" label="Create Multiplication" nodeMappings="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='NoeudExpression']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="expression::Multiplication" referenceName="elements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="DivisionCreation" label="Create Division" nodeMappings="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='NoeudExpression']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="expression::Division" referenceName="elements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="MaxCreation" label="Create Max" nodeMappings="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='NoeudExpression']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="expression::Max" referenceName="elements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="MaxCreation" label="Create Max" nodeMappings="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='NoeudExpression']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="expression::Min" referenceName="elements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Unaire" label="Fonction Unaire">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="SqrtCreation" label="Create Sqrt" nodeMappings="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='NoeudExpression']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="expression::Sqrt" referenceName="elements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CosinusCreation" label="Create Cosin" nodeMappings="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='NoeudExpression']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="expression::Cosinus" referenceName="elements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="SinusCreation" label="Create Sin" nodeMappings="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='NoeudExpression']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="expression::Sinus" referenceName="elements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="InverseCreation" label="Create Inverse" nodeMappings="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='NoeudExpression']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="expression::Inverse" referenceName="elements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="OpposeCreation" label="Create Oppose" nodeMappings="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='NoeudExpression']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="expression::Oppose" referenceName="elements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ExponentielleCreation" label="Create Exponentielle" nodeMappings="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='NoeudExpression']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="expression::Exponentielle" referenceName="elements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Const" label="Fonction Constante">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ConstAddition" label="Create Const" nodeMappings="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='NoeudExpression']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="expression::Const" referenceName="elements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Link" label="Liens">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="LinkCreation" label="Connecteur" edgeMappings="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@edgeMappings[name='ArreteExpression']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source/]">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="output" valueExpression="[target/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[element/]">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="output" valueExpression="[OclUndefined/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Flux" label="Flux In Out">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="InputCreation" label="Create Input" nodeMappings="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='NoeudExpression']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="expression::Input" referenceName="elements">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Input"/>
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="input" valueExpression="[instance/]"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="OutputCreation" label="Create Ouput" nodeMappings="//@ownedViewpoints[name='ExpressionViewpoint']/@ownedRepresentations[name='ExpressionDiagram']/@defaultLayer/@nodeMappings[name='NoeudExpression']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="expression::Output" referenceName="elements">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Output"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ToolDescription" name="SortieSelection">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[diagram.target/]">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="output" valueExpression="[element/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="expression.design.Services"/>
+  </ownedViewpoints>
+</description:Group>

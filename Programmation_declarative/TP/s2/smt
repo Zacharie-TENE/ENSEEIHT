@@ -1,0 +1,25 @@
+SAT : problèmes purement booléens (proposition logique).
+
+SMT : problèmes plus riches avec des théories (arithmétique, bitvectors, tableaux, etc.)
+
+SMT signifie Satisfiabilité Modulo Théories.
+ C'est une extension du problème SAT (Satisfiabilité) qui consiste à déterminer si une formule logique est satisfiable, 
+ c'est-à-dire s'il existe une affectation des variables qui rend la formule vraie.
+
+
+ SMT va plus loin en intégrant des théories spécifiques comme :
+
+    L'arithmétique des entiers ou des réels
+
+    Les tableaux
+
+    Les bit-vectors
+
+    Les fonctions non interprétées
+
+    Les chaînes de caractères
+
+Un solveur SMT, comme Z3, vérifie si une formule est satisfiable en tenant compte de ces théories. 
+Par exemple, il peut déterminer si une équation arithmétique a une solution entière, ce qui n'est pas possible avec un solveur SAT classique.
+
+Ces contraintes peuvent être exprimées sous forme de formules logiques avec des variables booléennes. Un solveur SMT peut alors déterminer si ces contraintes sont satisfiables et fournir une solution.

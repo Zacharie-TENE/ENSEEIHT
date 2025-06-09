@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tableModel:Tableau
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:tableModel="https://www.exemple.org/tableModel"
+    name="test constraints">
+  <colonnes
+      name="name"
+      identifier="test.anme"/>
+  <colonnes
+      name="testone"
+      dataType="float"
+      identifier="test.one">
+    <contrainte>DOIT_ETRE_POSITIF</contrainte>
+  </colonnes>
+</tableModel:Tableau>

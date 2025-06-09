@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/description/tool/1.1.0" name="schemaTable" version="12.0.0.2017041100">
+  <ownedViewpoints name="tableModelViewpoint" modelFileExtension="tableModel">
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="tableModelTable" domainClass="tableModel::Tableau" initialHeaderColumnWidth="190">
+      <metamodel href="file:/home/ztg4419/eclipse-workspace/fr.n7.project/model/tableProject.ecore#/"/>
+      <ownedLineMappings name="TableauLine" domainClass="tableModel::Tableau" semanticCandidatesExpression="[self/]" headerLabelExpression="Tableau"/>
+      <ownedLineMappings name="ColonneLine" domainClass="tableModel::Colonne" headerLabelExpression="[if (self.tableau.colonneDeLignes=self) then 'Colonne ' + self.tableau.colonnes->indexOf(self) + '    [*]' else 'Colonne ' + self.tableau.colonnes->indexOf(self) endif/]">
+        <backgroundConditionalStyle predicateExpression="[self.tableau.colonneDeLignes=self/]">
+          <style>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+          </style>
+        </backgroundConditionalStyle>
+        <ownedSubLines name="ImportTableLine" domainClass="tableModel::ImportationTableau" semanticCandidatesExpression="[self.colonneType.oclAsType(ImportationTableau)/]" headerLabelExpression="Imported">
+          <backgroundConditionalStyle predicateExpression="[self.oclAsType(ColonneType).colonne.tableau.colonneDeLignes=self.oclAsType(ColonneType).colonne/]">
+            <style>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+            </style>
+          </backgroundConditionalStyle>
+        </ownedSubLines>
+        <ownedSubLines name="AppelAlgoLine" domainClass="tableModel::ImportationAlgo" semanticCandidatesExpression="[self.colonneType.oclAsType(ImportationAlgo)/]" headerLabelExpression="Algorithme">
+          <backgroundConditionalStyle predicateExpression="[self.oclAsType(ColonneType).colonne.tableau.colonneDeLignes=self.oclAsType(ColonneType).colonne/]">
+            <style>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+            </style>
+          </backgroundConditionalStyle>
+        </ownedSubLines>
+        <create name="CreateAppelAlgo" label="Algorithme de calcul" mapping="//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']">
+          <variables name="root" documentation="The semantic root element of the table."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="[element/]">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="tableModel::ImportationAlgo" referenceName="colonneType"/>
+          </firstModelOperation>
+        </create>
+        <create name="CreateImportTable" label="Reference externe" mapping="//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']">
+          <variables name="root" documentation="The semantic root element of the table."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="[element/]">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="tableModel::ImportationTableau" referenceName="colonneType"/>
+          </firstModelOperation>
+        </create>
+        <create name="SetColonneLine" label="Designer colonne 'id'" mapping="//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']">
+          <variables name="root" documentation="The semantic root element of the table."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="[root/]">
+            <subModelOperations xsi:type="tool:SetValue" featureName="colonneDeLignes" valueExpression="[element/]"/>
+          </firstModelOperation>
+        </create>
+      </ownedLineMappings>
+      <ownedCreateLine name="CreateColumn" label="Nouvelle Colonne">
+        <variables name="root" documentation="The semantic root element of the table."/>
+        <variables name="element" documentation="The semantic currently edited element."/>
+        <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="[root/]">
+          <subModelOperations xsi:type="tool:CreateInstance" typeName="tableModel::Colonne" referenceName="colonnes"/>
+        </firstModelOperation>
+      </ownedCreateLine>
+      <ownedColumnMappings name="IdColumn" headerLabelExpression="Identifiant" initialWidth="100" featureName="identifier">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+        </defaultBackground>
+      </ownedColumnMappings>
+      <ownedColumnMappings name="ColumnName" headerLabelExpression="Nom" initialWidth="150" featureName="name">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+        </defaultBackground>
+      </ownedColumnMappings>
+      <ownedColumnMappings name="ColonneType" headerLabelExpression="Type" initialWidth="150" featureName="dataType">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+        </defaultBackground>
+      </ownedColumnMappings>
+      <ownedColumnMappings name="ImportTableTableColumn" headerLabelExpression="Schema Table" initialWidth="175" featureName="tableau">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+        </defaultBackground>
+      </ownedColumnMappings>
+      <ownedColumnMappings name="ContraintsColumn" headerLabelExpression="Contrainte" initialWidth="150" featureName="contrainte">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+        </defaultBackground>
+        <conditionalStyles predicateExpression="[self.contrainte = contrainte::CUSTOM/]">
+        <style>
+            <backgroundColor href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+        </style>
+    </conditionalStyles>
+      </ownedColumnMappings>
+      <ownedColumnMappings name="CustomConstraintAlgorithm" headerLabelExpression="Algorithme de contrainte" initialWidth="200" featureName="constraints" labelExpression="[self.constraints.name/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+        </defaultBackground>
+        <conditionalStyles predicateExpression="[self.contrainte->includes(contrainte::CUSTOM)]">
+    <style>
+        <editable>true</editable>
+    </style>
+</conditionalStyles>
+        <conditionalStyles predicateExpression="[not(self.contrainte->includes(contrainte::CUSTOM))]">
+    <style>
+        <editable>false</editable>
+    </style>
+</conditionalStyles>
+      </ownedColumnMappings>
+      <ownedColumnMappings name="ImportAlgoAlgoColumn" headerLabelExpression="Algorithme : Algorithme" initialWidth="175" featureName="algorithm" labelExpression="[self.algorithm.name/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+        </defaultBackground>
+      </ownedColumnMappings>
+      <ownedColumnMappings name="ImportTableIdColumnColumn" headerLabelExpression="Import: identifiant" initialWidth="175" featureName="identifiantColonne">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+        </defaultBackground>
+      </ownedColumnMappings>
+      <ownedColumnMappings name="ImportAlgoInputColumn" headerLabelExpression="Algorithme : Entree" initialWidth="175" featureName="ColonneIN" labelExpression="[self.ColonneIN.name/]">
+        <defaultBackground>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+        </defaultBackground>
+      </ownedColumnMappings>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="schemaTable.design.Services"/>
+  </ownedViewpoints>
+</description:Group>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithmProject:Algo xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:algorithmProject="http://www.example.org/algorithmProject" name="Positif">
+  <input type="float" value="input"/>
+  <ressource path="algorithmProject/positif.py"/>
+  <output type="bool" value="output"/>
+</algorithmProject:Algo>

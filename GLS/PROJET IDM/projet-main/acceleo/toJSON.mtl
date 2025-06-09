@@ -1,0 +1,106 @@
+[comment encoding = UTF-8 /]
+[module toJSON('https://www.exemple.org/tableModel', 'http://www.example.org/algorithmProject')]
+
+
+[template public TableToJSON(aTableau : Tableau)]
+[comment @main/]
+[file ('TAB_' + aTableau.name + '.json', false, 'UTF-8')]
+{
+	"Tableau": {
+		"name": "[aTableau.name/]",
+		"colonneReference": {
+			"name": "[aTableau.colonneDeLignes.name/]",
+			"id": "[aTableau.colonneDeLignes.identifier/]",
+			"type": "[aTableau.colonneDeLignes.dataType/]"
+		},
+		"colonnes": ['['/] 
+			[for (col : Colonne | aTableau.colonnes) separator(',')]
+			{
+				"name": "[col.name/]",
+				"type": "[col.dataType/]",
+				"id": "[col.identifier/]",
+				[if (not col.contrainte->isEmpty())]
+				"contraintes": ['['/]
+				[for (contr : contrainte | col.contrainte) separator(',')]
+					"[contr/]"
+				[/for]
+				[']'/],
+				[else]
+				"contraintes": {"NULL": "null"},
+				[/if]
+				[if (not col.constraints->isEmpty())]
+				"constraints": ['['/]
+						[for (cons : Algo | col.constraints) separator(',')]
+					 {
+						"name":"[cons.name/]",
+						"input": "[cons.input.value/]",
+						"path": [cons.ressource.path/],
+						"documentations": {
+							[for (doc : Documentation | cons.documentation) separator(',')]
+								"description": "[doc.description/]"
+							[/for]
+						}
+				}
+						[/for]
+					[']'/],
+				[else]
+				"constraints": {"NULL": "null"},
+				[/if]
+				[if (not col.colonneType.oclIsUndefined())]
+				"colonneType": {
+					[if (col.colonneType.oclIsTypeOf(ImportationAlgo))]
+					"colonneIN": ['['/]
+					[for (colIN : Colonne | col.colonneType.oclAsType(ImportationAlgo).ColonneIN) separator(',')]
+						{
+							"name": "[colIN.name/]",
+							"identifier": "[colIN.identifier/]"
+						}
+					[/for]
+					[']'/],
+						[if ((not col.colonneType.oclAsType(ImportationAlgo).algorithm.oclIsUndefined()))]
+					"algorithm": ['['/]
+						[for (inp : Flux | col.colonneType.oclAsType(ImportationAlgo).algorithm.input)]
+						{
+							"name": "input",
+							"type": "[inp.type/]",
+							"value": "[inp.value/]"
+						},
+						[/for]
+						{
+							"name": "output",
+							"type": "[col.colonneType.oclAsType(ImportationAlgo).algorithm.output.type/]",
+							"value": "[col.colonneType.oclAsType(ImportationAlgo).algorithm.output.value/]"
+						},
+						{
+							"name": "path",
+							"path": [col.colonneType.oclAsType(ImportationAlgo).algorithm.ressource.path/]
+						},
+						{
+							"name": "documentation",
+							[if (not col.colonneType.oclAsType(ImportationAlgo).algorithm.documentation->isEmpty())]	
+								[for (doc : Documentation | col.colonneType.oclAsType(ImportationAlgo).algorithm.documentation) separator(',')]
+							"description": "[doc.description/]"
+								[/for]
+							[else]
+							"NULL": "null"
+							[/if]
+						}
+					[']'/]
+						[else]
+					"algorithm": {"NULL": "null"}
+						[/if]
+					[else]
+					"tableauIN": "[col.colonneType.oclAsType(ImportationTableau).tableau.name/]",
+					"idColonne": "[col.colonneType.oclAsType(ImportationTableau).identifiantColonne/]"
+					[/if]
+				}
+				[else]
+				"colonneType": {"NULL": "null"}
+				[/if]
+			}
+			[/for]
+		[']'/]
+	}
+}
+[/file]
+[/template]

@@ -1,0 +1,29 @@
+\* Problem: Fabrication de velos *\
+
+Maximize
+Benefice: 700 C + 300 S 
+
+Subject To
+  TEMPS_DE_TRAVAIL : 6 C + 5 S <= 6000
+  ESPACE_DE_STOCKAGE : 5 C + 2 S <= 3000
+  LIMITE_CARGOS : C <= 700
+ 
+Bounds
+  0 <= C
+  0 <= S 
+
+\* To declare integer variables :   
+\* Integer 
+\* Q1 
+\* Q2  
+
+\* To declare binary variables :  
+\* Binary 
+\* Q1 
+\* Q2 
+
+End
+
+
+ 
+

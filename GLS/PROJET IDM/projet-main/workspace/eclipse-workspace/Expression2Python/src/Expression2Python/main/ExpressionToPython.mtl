@@ -1,0 +1,65 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module ToPython.
+ */]
+[module expressionToPython('http://www.example.org/expression')]
+
+[**
+ * The documentation of the template generateElement.
+ * @param anAddition
+ */]
+
+[template public Expression2Python(expressionCalcul : Expression)]
+[comment @main/]
+[file (expressionCalcul.name.concat('.py'), false, 'UTF-8')]
+
+import math
+
+def calc_addition(a, b):
+    return a + b
+
+def calc_multiplication(a, b):
+    return a * b
+
+def calc_soustraction(a, b):
+    return a - b
+
+def calc_division(a, b):
+    return a / b
+
+def calc_inverse(a):
+    return 1/a
+
+def calc_oppose(a):
+    return -a
+
+def calc_minimum(a,b):
+    if a < b:
+        return a
+    else:
+        return b
+
+def calc_maximum(a,b):
+    if a > b:
+        return a
+    else:
+        return b
+
+def calc_sqrt(a):
+    return math.sqrt(a)
+
+def calcul([for (entree : Flux | expressionCalcul.input) separator (',')][entree.name/] [/for]):
+    return [expressionCalcul.output.recursif()/]
+
+[/file]
+[/template]
+
+[template public recursif(anExprElement : ExpressionElement)] 
+[if (anExprElement.oclIsTypeOf(Sqrt))]calc_sqrt([recursif(anExprElement.input->at(1))/])
+[elseif (anExprElement.oclIsTypeOf(Division))]calc_division([recursif(anExprElement.input->at(1))/],[recursif(anExprElement.input->at(2))/])
+[elseif (anExprElement.oclIsTypeOf(Input))][anExprElement.oclAsType(Input).name/][elseif (anExprElement.oclIsTypeOf(Max))]calc_maximum([recursif(anExprElement.input->at(1))/],[recursif(anExprElement.input->at(2))/])
+[elseif (anExprElement.oclIsTypeOf(Oppose))]calc_oppose([recursif(anExprElement.input->at(1))/])[elseif (anExprElement.oclIsTypeOf(Min))]calc_minimum([recursif(anExprElement.input->at(1))/],[recursif(anExprElement.input->at(2))/])
+[elseif (anExprElement.oclIsTypeOf(Addition))]calc_addition([recursif(anExprElement.input->at(1))/],[recursif(anExprElement.input->at(2))/])[elseif (anExprElement.oclIsTypeOf(Soustraction))]calc_soustraction([recursif(anExprElement.input->at(1))/],[recursif(anExprElement.input->at(2))/])
+[elseif (anExprElement.oclIsTypeOf(Multiplication))]calc_multiplication([recursif(anExprElement.input->at(1))/],[recursif(anExprElement.input->at(2))/])[elseif (anExprElement.oclIsTypeOf(Const))][anExprElement.oclAsType(Const).value.toString()/][elseif (anExprElement.oclIsTypeOf(Inverse))]calc_inverse([recursif(anExprElement.input->at(1))/])
+[elseif (anExprElement.oclIsTypeOf(Output))][recursif(anExprElement.input->at(1))/] [/if]
+[/template]

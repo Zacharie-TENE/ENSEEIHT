@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<petrinet:PetriNet
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:petrinet="http://petrinet"
+    xsi:schemaLocation="http://petrinet PetriNet.ecore"
+    name="ProductionWidget">
+  <petriNetElements xsi:type="petrinet:Place" name="MatieresPremieresDisponibles" numJetons="10"/>
+  <petriNetElements xsi:type="petrinet:Place" name="MachinesDisponibles" numJetons="3"/>
+  <petriNetElements xsi:type="petrinet:Place" name="OuvriersDisponibles" numJetons="5"/>
+  <petriNetElements xsi:type="petrinet:Transition" name="ProduireWidget"/>
+  <petriNetElements xsi:type="petrinet:Place" name="WidgetsProduits" numJetons="0"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.0" destination="//@petriNetElements.3" weight="1" name="UtiliserMatierePremiere"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.1" destination="//@petriNetElements.3" weight="1" name="UtiliserMachine"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.2" destination="//@petriNetElements.3" weight="1" name="UtiliserOuvrier"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.3" destination="//@petriNetElements.4" weight="1" name="ProduireWidget"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.3" destination="//@petriNetElements.1" weight="1" name="LibererMachine"/>
+  <petriNetElements xsi:type="petrinet:Arc" source="//@petriNetElements.3" destination="//@petriNetElements.2" weight="1" name="LibererOuvrier"/>
+</petrinet:PetriNet>

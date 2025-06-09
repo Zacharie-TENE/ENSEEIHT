@@ -1,0 +1,1226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:table="http://www.eclipse.org/sirius/table/1.1.0" xmlns:tableModel="https://www.exemple.org/tableModel" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/table/description/1.1.0 http://www.eclipse.org/sirius/table/1.1.0#//description">
+  <viewpoint:DAnalysis uid="_mKk4QLlKEe-l65Ng7W-Olw" selectedViews="_Qp8OwL0jEe-mivwEV72GnQ _1SJAEL02Ee-ylO07nBwLxg" version="15.2.0.202303281325">
+    <semanticResources>MyAlgorithmProject.algorithmProject</semanticResources>
+    <semanticResources>MyTableModel.tableModel</semanticResources>
+    <semanticResources>banque_finance.xmi</semanticResources>
+    <semanticResources>banque_raw_finance.xmi</semanticResources>
+    <semanticResources>calcul_moyenne.xmi</semanticResources>
+    <semanticResources>calcul_variation.xmi</semanticResources>
+    <semanticResources>constraintTest.xmi</semanticResources>
+    <semanticResources>contrainteTest/MemeIdColonne.xmi</semanticResources>
+    <semanticResources>contrainteTest/MemeNomColonne.xmi</semanticResources>
+    <semanticResources>contrainteTest/TableauName.xmi</semanticResources>
+    <semanticResources>tableContrainteTest.xmi</semanticResources>
+    <semanticResources>AlgoPos.xmi</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="__4ICQLlPEe-JaI_1sWrOBA">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_AGdZMLlQEe-JaI_1sWrOBA" name="new SchemaTableTable" repPath="#_AD_7ELlQEe-JaI_1sWrOBA" changeId="1734094042874">
+        <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']"/>
+        <target xmi:type="tableModel:Tableau" href="MyTableModel.tableModel#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" uid="_Qp8OwL0jEe-mivwEV72GnQ">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Q4m84L0jEe-mivwEV72GnQ" name="new tableModelTable" repPath="#_Q2om8L0jEe-mivwEV72GnQ">
+        <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']"/>
+        <target xmi:type="tableModel:Tableau" href="MyTableModel.tableModel#/"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_I-l8kL03Ee-ylO07nBwLxg" name="banque finance tableau" repPath="#_I7lr4L03Ee-ylO07nBwLxg" changeId="1734687878170">
+        <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']"/>
+        <target xmi:type="tableModel:Tableau" href="banque_finance.xmi#/"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_ePsPxL1EEe-pO7bSpxq8Yw" name="banque finance raw" repPath="#_eNsEoL1EEe-pO7bSpxq8Yw">
+        <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']"/>
+        <target xmi:type="tableModel:Tableau" href="banque_raw_finance.xmi#/"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_7hYy3b1FEe-pO7bSpxq8Yw" name="new tableModelTable" repPath="#_7hPo0L1FEe-pO7bSpxq8Yw" changeId="1734529468499">
+        <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']"/>
+        <target xmi:type="tableModel:Tableau" href="MyTableModel.tableModel#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" uid="_1SJAEL02Ee-ylO07nBwLxg">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/algo.design/description/algo.odesign#//@ownedViewpoints[name='algoViewpoint']"/>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <table:DTable uid="_AD_7ELlQEe-JaI_1sWrOBA" headerColumnWidth="200">
+    <target xmi:type="tableModel:Tableau" href="MyTableModel.tableModel#/"/>
+    <lines xmi:type="table:DLine" uid="_AFjaQLlQEe-JaI_1sWrOBA" label="Tableau">
+      <target xmi:type="tableModel:Tableau" href="MyTableModel.tableModel#/"/>
+      <semanticElements xmi:type="tableModel:Tableau" href="MyTableModel.tableModel#/"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']/@ownedLineMappings[name='TableauLine']"/>
+      <cells xmi:type="table:DCell" uid="_AGUPSblQEe-JaI_1sWrOBA" label="zacharie" column="_AGToMLlQEe-JaI_1sWrOBA">
+        <target xmi:type="tableModel:Tableau" href="MyTableModel.tableModel#/"/>
+        <semanticElements xmi:type="tableModel:Tableau" href="MyTableModel.tableModel#/"/>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_AFnEoLlQEe-JaI_1sWrOBA" label="Colonne 1    [*]">
+      <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+      <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_AGU2WLlQEe-JaI_1sWrOBA" label="" column="_AGToMLlQEe-JaI_1sWrOBA">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_AGU2W7lQEe-JaI_1sWrOBA" label="string" column="_AGToNLlQEe-JaI_1sWrOBA">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_AGU2XblQEe-JaI_1sWrOBA" label="[DOIT_ETRE_NEGATIF, NON_NUL, DOIT_ETRE_POSITIF]" column="_AGToNrlQEe-JaI_1sWrOBA">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_AGYgsblQEe-JaI_1sWrOBA" label="Tableau zacharie" column="_AGUPQblQEe-JaI_1sWrOBA">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_AF-RALlQEe-JaI_1sWrOBA" backgroundColor="253,206,137"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_AGDJgLlQEe-JaI_1sWrOBA" label="Colonne 2">
+      <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+      <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_AGZHxLlQEe-JaI_1sWrOBA" label="" column="_AGToMLlQEe-JaI_1sWrOBA">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_AGZHx7lQEe-JaI_1sWrOBA" label="string" column="_AGToNLlQEe-JaI_1sWrOBA">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_AGZHyblQEe-JaI_1sWrOBA" label="[]" column="_AGToNrlQEe-JaI_1sWrOBA">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_AGZHy7lQEe-JaI_1sWrOBA" label="Tableau zacharie" column="_AGUPQblQEe-JaI_1sWrOBA">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_AGDJgrlQEe-JaI_1sWrOBA" label="Colonne 3">
+      <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+      <lines xmi:type="table:DLine" uid="_AGLFULlQEe-JaI_1sWrOBA" label="Imported">
+        <target xmi:type="tableModel:ImportationTableau" href="MyTableModel.tableModel#//@colonnes.2/@colonneType"/>
+        <semanticElements xmi:type="tableModel:ImportationTableau" href="MyTableModel.tableModel#//@colonnes.2/@colonneType"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']/@ownedLineMappings[name='ColonneLine']/@ownedSubLines[name='ImportTableLine']"/>
+        <cells xmi:type="table:DCell" uid="_AGZu2LlQEe-JaI_1sWrOBA" label="" column="_AGUPQblQEe-JaI_1sWrOBA">
+          <target xmi:type="tableModel:ImportationTableau" href="MyTableModel.tableModel#//@colonnes.2/@colonneType"/>
+          <semanticElements xmi:type="tableModel:ImportationTableau" href="MyTableModel.tableModel#//@colonnes.2/@colonneType"/>
+        </cells>
+      </lines>
+      <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_AGZH0LlQEe-JaI_1sWrOBA" label="" column="_AGToMLlQEe-JaI_1sWrOBA">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_AGZH07lQEe-JaI_1sWrOBA" label="string" column="_AGToNLlQEe-JaI_1sWrOBA">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_AGZH1blQEe-JaI_1sWrOBA" label="[]" column="_AGToNrlQEe-JaI_1sWrOBA">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_AGZH17lQEe-JaI_1sWrOBA" label="Tableau zacharie" column="_AGUPQblQEe-JaI_1sWrOBA">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_AGDwkblQEe-JaI_1sWrOBA" label="Colonne 4">
+      <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.3"/>
+      <lines xmi:type="table:DLine" uid="_AGOvsLlQEe-JaI_1sWrOBA" label="Algorithme">
+        <target xmi:type="tableModel:ImportationAlgo" href="MyTableModel.tableModel#//@colonnes.3/@colonneType"/>
+        <semanticElements xmi:type="tableModel:ImportationAlgo" href="MyTableModel.tableModel#//@colonnes.3/@colonneType"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']/@ownedLineMappings[name='ColonneLine']/@ownedSubLines[name='AppelAlgoLine']"/>
+        <cells xmi:type="table:DCell" uid="_AGZu8LlQEe-JaI_1sWrOBA" label="invalid" column="_AGUPR7lQEe-JaI_1sWrOBA">
+          <target xmi:type="tableModel:ImportationAlgo" href="MyTableModel.tableModel#//@colonnes.3/@colonneType"/>
+          <semanticElements xmi:type="tableModel:ImportationAlgo" href="MyTableModel.tableModel#//@colonnes.3/@colonneType"/>
+        </cells>
+      </lines>
+      <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.3"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_AGZu3blQEe-JaI_1sWrOBA" label="" column="_AGToMLlQEe-JaI_1sWrOBA">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.3"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.3"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_AGZu4LlQEe-JaI_1sWrOBA" label="string" column="_AGToNLlQEe-JaI_1sWrOBA">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.3"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.3"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_AGZu4rlQEe-JaI_1sWrOBA" label="[]" column="_AGToNrlQEe-JaI_1sWrOBA">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.3"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.3"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_AGZu5LlQEe-JaI_1sWrOBA" label="Tableau zacharie" column="_AGUPQblQEe-JaI_1sWrOBA">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.3"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.3"/>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_AGDwk7lQEe-JaI_1sWrOBA" label="Colonne 5">
+      <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.4"/>
+      <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.4"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_AGcLEblQEe-JaI_1sWrOBA" label="" column="_AGToMLlQEe-JaI_1sWrOBA">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.4"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.4"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_AGcLFLlQEe-JaI_1sWrOBA" label="string" column="_AGToNLlQEe-JaI_1sWrOBA">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.4"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.4"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_AGcLFrlQEe-JaI_1sWrOBA" label="[]" column="_AGToNrlQEe-JaI_1sWrOBA">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.4"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.4"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_AGcyIblQEe-JaI_1sWrOBA" label="Tableau zacharie" column="_AGUPQblQEe-JaI_1sWrOBA">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.4"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.4"/>
+      </cells>
+    </lines>
+    <columns xmi:type="table:DFeatureColumn" uid="_AGToMLlQEe-JaI_1sWrOBA" label="Nom" cells="_AGUPSblQEe-JaI_1sWrOBA _AGU2WLlQEe-JaI_1sWrOBA _AGZHxLlQEe-JaI_1sWrOBA _AGZH0LlQEe-JaI_1sWrOBA _AGZu3blQEe-JaI_1sWrOBA _AGcLEblQEe-JaI_1sWrOBA" width="100" featureName="name">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']/@ownedColumnMappings[name='NameColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_AGToMblQEe-JaI_1sWrOBA" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_AGToMrlQEe-JaI_1sWrOBA" label="Identifiant" width="100" featureName="id">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']/@ownedColumnMappings[name='IdColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_AGToM7lQEe-JaI_1sWrOBA" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_AGToNLlQEe-JaI_1sWrOBA" label="Type" cells="_AGU2W7lQEe-JaI_1sWrOBA _AGZHx7lQEe-JaI_1sWrOBA _AGZH07lQEe-JaI_1sWrOBA _AGZu4LlQEe-JaI_1sWrOBA _AGcLFLlQEe-JaI_1sWrOBA" width="100" featureName="dataType">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']/@ownedColumnMappings[name='TypeColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_AGToNblQEe-JaI_1sWrOBA" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_AGToNrlQEe-JaI_1sWrOBA" label="Contrainte" cells="_AGU2XblQEe-JaI_1sWrOBA _AGZHyblQEe-JaI_1sWrOBA _AGZH1blQEe-JaI_1sWrOBA _AGZu4rlQEe-JaI_1sWrOBA _AGcLFrlQEe-JaI_1sWrOBA" width="150" featureName="contrainte">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']/@ownedColumnMappings[name='ContraintsColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_AGUPQLlQEe-JaI_1sWrOBA" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_AGUPQblQEe-JaI_1sWrOBA" label="Import: Table" cells="_AGYgsblQEe-JaI_1sWrOBA _AGZHy7lQEe-JaI_1sWrOBA _AGZH17lQEe-JaI_1sWrOBA _AGZu2LlQEe-JaI_1sWrOBA _AGZu5LlQEe-JaI_1sWrOBA _AGcyIblQEe-JaI_1sWrOBA" width="175" featureName="tableau">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']/@ownedColumnMappings[name='ImportTableTableColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_AGUPQrlQEe-JaI_1sWrOBA" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_AGUPQ7lQEe-JaI_1sWrOBA" label="Import: Id" width="175" featureName="idColumn">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']/@ownedColumnMappings[name='ImportTableIdColumnColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_AGUPRLlQEe-JaI_1sWrOBA" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_AGUPRblQEe-JaI_1sWrOBA" label="Algorithme:Input" width="175" featureName="input">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']/@ownedColumnMappings[name='AppelAlgoInputColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_AGUPRrlQEe-JaI_1sWrOBA" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_AGUPR7lQEe-JaI_1sWrOBA" label="Algorithme:Algorithme" cells="_AGZu8LlQEe-JaI_1sWrOBA" width="175" featureName="algorithm">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']/@ownedColumnMappings[name='AppelAlgoAlgoColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_AGUPSLlQEe-JaI_1sWrOBA" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='schemaTableViewpoint']/@ownedRepresentations[name='SchemaTableTable']"/>
+  </table:DTable>
+  <table:DTable uid="_Q2om8L0jEe-mivwEV72GnQ" headerColumnWidth="190">
+    <target xmi:type="tableModel:Tableau" href="MyTableModel.tableModel#/"/>
+    <lines xmi:type="table:DLine" uid="_Q2y_AL0jEe-mivwEV72GnQ" label="Tableau">
+      <target xmi:type="tableModel:Tableau" href="MyTableModel.tableModel#/"/>
+      <semanticElements xmi:type="tableModel:Tableau" href="MyTableModel.tableModel#/"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='TableauLine']"/>
+      <cells xmi:type="table:DCell" uid="_Q3Y0870jEe-mivwEV72GnQ" label="zacharie" column="_Q3Y04r0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Tableau" href="MyTableModel.tableModel#/"/>
+        <semanticElements xmi:type="tableModel:Tableau" href="MyTableModel.tableModel#/"/>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_Q2y_Ar0jEe-mivwEV72GnQ" label="Colonne 1    [*]">
+      <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+      <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_Q3Zb-L0jEe-mivwEV72GnQ" label="" column="_Q3Y04L0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_Q3Zb-r0jEe-mivwEV72GnQ" label="" column="_Q3Y04r0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_Q3Zb_L0jEe-mivwEV72GnQ" label="string" column="_Q3Y05L0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_Q3Zb_r0jEe-mivwEV72GnQ" label="Tableau zacharie" column="_Q3Y05r0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_Q3ZcAL0jEe-mivwEV72GnQ" label="[DOIT_ETRE_NEGATIF, NON_NUL, DOIT_ETRE_POSITIF]" column="_Q3Y06L0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_Q3ZcAr0jEe-mivwEV72GnQ" column="_Q3Y06r0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_Q2_zUL0jEe-mivwEV72GnQ" backgroundColor="253,206,137"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_Q3EEwL0jEe-mivwEV72GnQ" label="Colonne 2">
+      <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+      <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_Q3rv1L0jEe-mivwEV72GnQ" label="" column="_Q3Y04L0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_Q3rv1r0jEe-mivwEV72GnQ" label="" column="_Q3Y04r0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_Q3rv2L0jEe-mivwEV72GnQ" label="string" column="_Q3Y05L0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_Q3rv2r0jEe-mivwEV72GnQ" label="Tableau zacharie" column="_Q3Y05r0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_Q3rv3L0jEe-mivwEV72GnQ" label="[]" column="_Q3Y06L0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_Q3rv3r0jEe-mivwEV72GnQ" column="_Q3Y06r0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_Q3Er0b0jEe-mivwEV72GnQ" label="Colonne 3">
+      <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+      <lines xmi:type="table:DLine" uid="_Q3PD4L0jEe-mivwEV72GnQ" label="Imported">
+        <target xmi:type="tableModel:ImportationTableau" href="MyTableModel.tableModel#//@colonnes.2/@colonneType"/>
+        <semanticElements xmi:type="tableModel:ImportationTableau" href="MyTableModel.tableModel#//@colonnes.2/@colonneType"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']/@ownedSubLines[name='ImportTableLine']"/>
+        <cells xmi:type="table:DCell" uid="_Q4F_hb0jEe-mivwEV72GnQ" label="" column="_Q3Y05r0jEe-mivwEV72GnQ">
+          <target xmi:type="tableModel:ImportationTableau" href="MyTableModel.tableModel#//@colonnes.2/@colonneType"/>
+          <semanticElements xmi:type="tableModel:ImportationTableau" href="MyTableModel.tableModel#//@colonnes.2/@colonneType"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_Q4F_ir0jEe-mivwEV72GnQ" label="" column="_Q3Y07r0jEe-mivwEV72GnQ">
+          <target xmi:type="tableModel:ImportationTableau" href="MyTableModel.tableModel#//@colonnes.2/@colonneType"/>
+          <semanticElements xmi:type="tableModel:ImportationTableau" href="MyTableModel.tableModel#//@colonnes.2/@colonneType"/>
+        </cells>
+      </lines>
+      <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_Q35LNL0jEe-mivwEV72GnQ" label="" column="_Q3Y04L0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_Q35LNr0jEe-mivwEV72GnQ" label="" column="_Q3Y04r0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_Q35LOL0jEe-mivwEV72GnQ" label="string" column="_Q3Y05L0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_Q35LOr0jEe-mivwEV72GnQ" label="Tableau zacharie" column="_Q3Y05r0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_Q35LPL0jEe-mivwEV72GnQ" label="[]" column="_Q3Y06L0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_Q35LPr0jEe-mivwEV72GnQ" column="_Q3Y06r0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_Q3FS4L0jEe-mivwEV72GnQ" label="Colonne 4">
+      <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.3"/>
+      <lines xmi:type="table:DLine" uid="_Q3T8YL0jEe-mivwEV72GnQ" label="Algorithme">
+        <target xmi:type="tableModel:ImportationAlgo" href="MyTableModel.tableModel#//@colonnes.3/@colonneType"/>
+        <semanticElements xmi:type="tableModel:ImportationAlgo" href="MyTableModel.tableModel#//@colonnes.3/@colonneType"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']/@ownedSubLines[name='AppelAlgoLine']"/>
+        <cells xmi:type="table:DCell" uid="_Q4Rlur0jEe-mivwEV72GnQ" label="invalid" column="_Q3Y07L0jEe-mivwEV72GnQ">
+          <target xmi:type="tableModel:ImportationAlgo" href="MyTableModel.tableModel#//@colonnes.3/@colonneType"/>
+          <semanticElements xmi:type="tableModel:ImportationAlgo" href="MyTableModel.tableModel#//@colonnes.3/@colonneType"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_Q4V3Ir0jEe-mivwEV72GnQ" label="[]" column="_Q3Y08L0jEe-mivwEV72GnQ">
+          <target xmi:type="tableModel:ImportationAlgo" href="MyTableModel.tableModel#//@colonnes.3/@colonneType"/>
+          <semanticElements xmi:type="tableModel:ImportationAlgo" href="MyTableModel.tableModel#//@colonnes.3/@colonneType"/>
+        </cells>
+      </lines>
+      <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.3"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_Q4F_jb0jEe-mivwEV72GnQ" label="" column="_Q3Y04L0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.3"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.3"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_Q4F_j70jEe-mivwEV72GnQ" label="" column="_Q3Y04r0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.3"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.3"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_Q4F_kb0jEe-mivwEV72GnQ" label="string" column="_Q3Y05L0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.3"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.3"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_Q4F_k70jEe-mivwEV72GnQ" label="Tableau zacharie" column="_Q3Y05r0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.3"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.3"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_Q4F_lb0jEe-mivwEV72GnQ" label="[]" column="_Q3Y06L0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.3"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.3"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_Q4F_l70jEe-mivwEV72GnQ" column="_Q3Y06r0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.3"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.3"/>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_Q3FS4r0jEe-mivwEV72GnQ" label="Colonne 5">
+      <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.4"/>
+      <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.4"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_Q4Zhgb0jEe-mivwEV72GnQ" label="" column="_Q3Y04L0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.4"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.4"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_Q4Zhg70jEe-mivwEV72GnQ" label="" column="_Q3Y04r0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.4"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.4"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_Q4Zhhb0jEe-mivwEV72GnQ" label="string" column="_Q3Y05L0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.4"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.4"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_Q4Zhh70jEe-mivwEV72GnQ" label="Tableau zacharie" column="_Q3Y05r0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.4"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.4"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_Q4Zhib0jEe-mivwEV72GnQ" label="[]" column="_Q3Y06L0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.4"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.4"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_Q4Zhi70jEe-mivwEV72GnQ" column="_Q3Y06r0jEe-mivwEV72GnQ">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.4"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.4"/>
+      </cells>
+    </lines>
+    <columns xmi:type="table:DFeatureColumn" uid="_Q3Y04L0jEe-mivwEV72GnQ" label="Identifiant" cells="_Q3Zb-L0jEe-mivwEV72GnQ _Q3rv1L0jEe-mivwEV72GnQ _Q35LNL0jEe-mivwEV72GnQ _Q4F_jb0jEe-mivwEV72GnQ _Q4Zhgb0jEe-mivwEV72GnQ" width="100" featureName="identifier">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='IdColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_Q3Y04b0jEe-mivwEV72GnQ" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_Q3Y04r0jEe-mivwEV72GnQ" label="Nom" cells="_Q3Y0870jEe-mivwEV72GnQ _Q3Zb-r0jEe-mivwEV72GnQ _Q3rv1r0jEe-mivwEV72GnQ _Q35LNr0jEe-mivwEV72GnQ _Q4F_j70jEe-mivwEV72GnQ _Q4Zhg70jEe-mivwEV72GnQ" width="150" featureName="name">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ColonneContrainte']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_Q3Y0470jEe-mivwEV72GnQ" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_Q3Y05L0jEe-mivwEV72GnQ" label="Type" cells="_Q3Zb_L0jEe-mivwEV72GnQ _Q3rv2L0jEe-mivwEV72GnQ _Q35LOL0jEe-mivwEV72GnQ _Q4F_kb0jEe-mivwEV72GnQ _Q4Zhhb0jEe-mivwEV72GnQ" width="150" featureName="dataType">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ColonneType']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_Q3Y05b0jEe-mivwEV72GnQ" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_Q3Y05r0jEe-mivwEV72GnQ" label="Schema Table" cells="_Q3Zb_r0jEe-mivwEV72GnQ _Q3rv2r0jEe-mivwEV72GnQ _Q35LOr0jEe-mivwEV72GnQ _Q4F_hb0jEe-mivwEV72GnQ _Q4F_k70jEe-mivwEV72GnQ _Q4Zhh70jEe-mivwEV72GnQ" width="175" featureName="tableau">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ImportTableTableColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_Q3Y0570jEe-mivwEV72GnQ" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_Q3Y06L0jEe-mivwEV72GnQ" label="Contrainte" cells="_Q3ZcAL0jEe-mivwEV72GnQ _Q3rv3L0jEe-mivwEV72GnQ _Q35LPL0jEe-mivwEV72GnQ _Q4F_lb0jEe-mivwEV72GnQ _Q4Zhib0jEe-mivwEV72GnQ" width="150" featureName="contrainte">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ContraintsColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_Q3Y06b0jEe-mivwEV72GnQ" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_Q3Y06r0jEe-mivwEV72GnQ" label="Algorithme de contrainte" cells="_Q3ZcAr0jEe-mivwEV72GnQ _Q3rv3r0jEe-mivwEV72GnQ _Q35LPr0jEe-mivwEV72GnQ _Q4F_l70jEe-mivwEV72GnQ _Q4Zhi70jEe-mivwEV72GnQ" width="200" featureName="constraints">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='CustomConstraintAlgorithm']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_Q3Y0670jEe-mivwEV72GnQ" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_Q3Y07L0jEe-mivwEV72GnQ" label="Algorithme : Algorithme" cells="_Q4Rlur0jEe-mivwEV72GnQ" width="175" featureName="algorithm">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ImportAlgoAlgoColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_Q3Y07b0jEe-mivwEV72GnQ" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_Q3Y07r0jEe-mivwEV72GnQ" label="Import: identifiant" cells="_Q4F_ir0jEe-mivwEV72GnQ" width="175" featureName="identifiantColonne">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ImportTableIdColumnColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_Q3Y0770jEe-mivwEV72GnQ" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_Q3Y08L0jEe-mivwEV72GnQ" label="Algorithme : Entree" cells="_Q4V3Ir0jEe-mivwEV72GnQ" width="175" featureName="ColonneIN">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ImportAlgoInputColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_Q3Y08b0jEe-mivwEV72GnQ" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']"/>
+  </table:DTable>
+  <table:DTable uid="_I7lr4L03Ee-ylO07nBwLxg" headerColumnWidth="190">
+    <target xmi:type="tableModel:Tableau" href="banque_finance.xmi#/"/>
+    <lines xmi:type="table:DLine" uid="_I8LhwL03Ee-ylO07nBwLxg" label="Tableau">
+      <target xmi:type="tableModel:Tableau" href="banque_finance.xmi#/"/>
+      <semanticElements xmi:type="tableModel:Tableau" href="banque_finance.xmi#/"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='TableauLine']"/>
+      <cells xmi:type="table:DCell" uid="_uEtTk703Ee-ylO07nBwLxg" label="banque finance" column="_uEtTkL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Tableau" href="banque_finance.xmi#/"/>
+        <semanticElements xmi:type="tableModel:Tableau" href="banque_finance.xmi#/"/>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_I8NW8L03Ee-ylO07nBwLxg" label="Colonne 1    [*]">
+      <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.0"/>
+      <lines xmi:type="table:DLine" uid="_24uZsL6yEe-1TsYj4--Rpw" label="Imported">
+        <target xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.0/@colonneType"/>
+        <semanticElements xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.0/@colonneType"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']/@ownedSubLines[name='ImportTableLine']"/>
+        <cells xmi:type="table:DCell" uid="_245Y1L6yEe-1TsYj4--Rpw" label="Tableau banque raw finance" column="_I8ylxr03Ee-ylO07nBwLxg">
+          <target xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.0/@colonneType"/>
+          <semanticElements xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.0/@colonneType"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_245Y2b6yEe-1TsYj4--Rpw" label="banque.finance.raw.date" column="_I8ylzr03Ee-ylO07nBwLxg">
+          <target xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.0/@colonneType"/>
+          <semanticElements xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.0/@colonneType"/>
+        </cells>
+        <currentStyle xmi:type="table:DTableElementStyle" uid="_24uZsb6yEe-1TsYj4--Rpw" backgroundColor="253,206,137"/>
+      </lines>
+      <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_I80a-L03Ee-ylO07nBwLxg" label="banque.finance.date" column="_I8ylwL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I80a_L03Ee-ylO07nBwLxg" label="float" column="_I8ylxL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I80a_r03Ee-ylO07nBwLxg" label="Tableau banque finance" column="_I8ylxr03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I81CAb03Ee-ylO07nBwLxg" label="[]" column="_I8ylyL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I81CA703Ee-ylO07nBwLxg" label="[]" column="_I8ylyr03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_uEtTnL03Ee-ylO07nBwLxg" label="Date" column="_uEtTkL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.0"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_I8bZYL03Ee-ylO07nBwLxg" backgroundColor="253,206,137"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_I8fDwL03Ee-ylO07nBwLxg" label="Colonne 2">
+      <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.1"/>
+      <lines xmi:type="table:DLine" uid="_I8oNsL03Ee-ylO07nBwLxg" label="Imported">
+        <target xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.1/@colonneType"/>
+        <semanticElements xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.1/@colonneType"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']/@ownedSubLines[name='ImportTableLine']"/>
+        <cells xmi:type="table:DCell" uid="_I9TjJ703Ee-ylO07nBwLxg" label="Tableau banque raw finance" column="_I8ylxr03Ee-ylO07nBwLxg">
+          <target xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.1/@colonneType"/>
+          <semanticElements xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.1/@colonneType"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_I9UKNL03Ee-ylO07nBwLxg" label="banque.finance.raw.open" column="_I8ylzr03Ee-ylO07nBwLxg">
+          <target xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.1/@colonneType"/>
+          <semanticElements xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.1/@colonneType"/>
+        </cells>
+      </lines>
+      <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.1"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_I9H89L03Ee-ylO07nBwLxg" label="banque.finance.ouverture" column="_I8ylwL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I9H8-L03Ee-ylO07nBwLxg" label="float" column="_I8ylxL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I9H8-r03Ee-ylO07nBwLxg" label="Tableau banque finance" column="_I8ylxr03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I9H8_L03Ee-ylO07nBwLxg" label="[DOIT_ETRE_POSITIF, CUSTOM]" column="_I8ylyL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I9H8_r03Ee-ylO07nBwLxg" label="[Positif]" column="_I8ylyr03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_uE5g0b03Ee-ylO07nBwLxg" label="Ouverture" column="_uEtTkL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.1"/>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_I8fq0b03Ee-ylO07nBwLxg" label="Colonne 3">
+      <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.2"/>
+      <lines xmi:type="table:DLine" uid="_I8r4EL03Ee-ylO07nBwLxg" label="Imported">
+        <target xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.2/@colonneType"/>
+        <semanticElements xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.2/@colonneType"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']/@ownedSubLines[name='ImportTableLine']"/>
+        <cells xmi:type="table:DCell" uid="_I9fJV703Ee-ylO07nBwLxg" label="Tableau banque raw finance" column="_I8ylxr03Ee-ylO07nBwLxg">
+          <target xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.2/@colonneType"/>
+          <semanticElements xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.2/@colonneType"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_I9fJXL03Ee-ylO07nBwLxg" label="banque.finance.raw.low" column="_I8ylzr03Ee-ylO07nBwLxg">
+          <target xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.2/@colonneType"/>
+          <semanticElements xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.2/@colonneType"/>
+        </cells>
+      </lines>
+      <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.2"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_I9UKN703Ee-ylO07nBwLxg" label="banque.finance.min" column="_I8ylwL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I9UKO703Ee-ylO07nBwLxg" label="float" column="_I8ylxL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I9UKPb03Ee-ylO07nBwLxg" label="Tableau banque finance" column="_I8ylxr03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I9UKP703Ee-ylO07nBwLxg" label="[DOIT_ETRE_POSITIF]" column="_I8ylyL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I9UKQb03Ee-ylO07nBwLxg" label="[Positif]" column="_I8ylyr03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_uE_Aar03Ee-ylO07nBwLxg" label="Min" column="_uEtTkL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.2"/>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_I8fq0703Ee-ylO07nBwLxg" label="Colonne 4">
+      <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.3"/>
+      <lines xmi:type="table:DLine" uid="_I8sfIL03Ee-ylO07nBwLxg" label="Imported">
+        <target xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.3/@colonneType"/>
+        <semanticElements xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.3/@colonneType"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']/@ownedSubLines[name='ImportTableLine']"/>
+        <cells xmi:type="table:DCell" uid="_I9rWl703Ee-ylO07nBwLxg" label="Tableau banque raw finance" column="_I8ylxr03Ee-ylO07nBwLxg">
+          <target xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.3/@colonneType"/>
+          <semanticElements xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.3/@colonneType"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_I9rWnL03Ee-ylO07nBwLxg" label="banque.finance.raw.high" column="_I8ylzr03Ee-ylO07nBwLxg">
+          <target xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.3/@colonneType"/>
+          <semanticElements xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.3/@colonneType"/>
+        </cells>
+      </lines>
+      <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.3"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_I9fJX703Ee-ylO07nBwLxg" label="banque.finance.max" column="_I8ylwL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.3"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.3"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I9fJY703Ee-ylO07nBwLxg" label="float" column="_I8ylxL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.3"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.3"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I9fJZb03Ee-ylO07nBwLxg" label="Tableau banque finance" column="_I8ylxr03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.3"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.3"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I9fJZ703Ee-ylO07nBwLxg" label="[DOIT_ETRE_POSITIF]" column="_I8ylyL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.3"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.3"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I9fwYL03Ee-ylO07nBwLxg" label="[Positif]" column="_I8ylyr03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.3"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.3"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_uFG8Or03Ee-ylO07nBwLxg" label="Max" column="_uEtTkL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.3"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.3"/>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_I8gR4L03Ee-ylO07nBwLxg" label="Colonne 5">
+      <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.4"/>
+      <lines xmi:type="table:DLine" uid="_I8tGML03Ee-ylO07nBwLxg" label="Imported">
+        <target xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.4/@colonneType"/>
+        <semanticElements xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.4/@colonneType"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']/@ownedSubLines[name='ImportTableLine']"/>
+        <cells xmi:type="table:DCell" uid="_I93j0703Ee-ylO07nBwLxg" label="Tableau banque raw finance" column="_I8ylxr03Ee-ylO07nBwLxg">
+          <target xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.4/@colonneType"/>
+          <semanticElements xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.4/@colonneType"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_I93j2L03Ee-ylO07nBwLxg" label="banque.finance.raw.close" column="_I8ylzr03Ee-ylO07nBwLxg">
+          <target xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.4/@colonneType"/>
+          <semanticElements xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.4/@colonneType"/>
+        </cells>
+      </lines>
+      <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.4"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_I9rWn703Ee-ylO07nBwLxg" label="banque.finance.fermeture" column="_I8ylwL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.4"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.4"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I9rWo703Ee-ylO07nBwLxg" label="float" column="_I8ylxL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.4"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.4"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I9rWpb03Ee-ylO07nBwLxg" label="Tableau banque finance" column="_I8ylxr03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.4"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.4"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I9rWp703Ee-ylO07nBwLxg" label="[DOIT_ETRE_POSITIF]" column="_I8ylyL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.4"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.4"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I9rWqb03Ee-ylO07nBwLxg" label="[Positif]" column="_I8ylyr03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.4"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.4"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_uFMbyr03Ee-ylO07nBwLxg" label="Fermeture" column="_uEtTkL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.4"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.4"/>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_I8gR4r03Ee-ylO07nBwLxg" label="Colonne 6">
+      <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.5"/>
+      <lines xmi:type="table:DLine" uid="_I8ttQL03Ee-ylO07nBwLxg" label="Imported">
+        <target xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.5/@colonneType"/>
+        <semanticElements xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.5/@colonneType"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']/@ownedSubLines[name='ImportTableLine']"/>
+        <cells xmi:type="table:DCell" uid="_I-DxF703Ee-ylO07nBwLxg" label="Tableau banque raw finance" column="_I8ylxr03Ee-ylO07nBwLxg">
+          <target xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.5/@colonneType"/>
+          <semanticElements xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.5/@colonneType"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_I-DxHL03Ee-ylO07nBwLxg" label="banque.finance.raw.volume" column="_I8ylzr03Ee-ylO07nBwLxg">
+          <target xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.5/@colonneType"/>
+          <semanticElements xmi:type="tableModel:ImportationTableau" href="banque_finance.xmi#//@colonnes.5/@colonneType"/>
+        </cells>
+      </lines>
+      <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.5"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_I93j2703Ee-ylO07nBwLxg" label="banque.finance.volume" column="_I8ylwL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.5"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.5"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I94K4L03Ee-ylO07nBwLxg" label="float" column="_I8ylxL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.5"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.5"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I94K4r03Ee-ylO07nBwLxg" label="Tableau banque finance" column="_I8ylxr03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.5"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.5"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I94K5L03Ee-ylO07nBwLxg" label="[DOIT_ETRE_POSITIF]" column="_I8ylyL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.5"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.5"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I94K5r03Ee-ylO07nBwLxg" label="[Positif]" column="_I8ylyr03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.5"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.5"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_uFSiar03Ee-ylO07nBwLxg" label="Volume" column="_uEtTkL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.5"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.5"/>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_I8gR5L03Ee-ylO07nBwLxg" label="Colonne 7">
+      <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.6"/>
+      <lines xmi:type="table:DLine" uid="_I8uUUL03Ee-ylO07nBwLxg" label="Algorithme">
+        <target xmi:type="tableModel:ImportationAlgo" href="banque_finance.xmi#//@colonnes.6/@colonneType"/>
+        <semanticElements xmi:type="tableModel:ImportationAlgo" href="banque_finance.xmi#//@colonnes.6/@colonneType"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']/@ownedSubLines[name='AppelAlgoLine']"/>
+        <cells xmi:type="table:DCell" uid="_I-Qlab03Ee-ylO07nBwLxg" label="calcul_moyenne" column="_I8ylzL03Ee-ylO07nBwLxg">
+          <target xmi:type="tableModel:ImportationAlgo" href="banque_finance.xmi#//@colonnes.6/@colonneType"/>
+          <semanticElements xmi:type="tableModel:ImportationAlgo" href="banque_finance.xmi#//@colonnes.6/@colonneType"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_I-Tosr03Ee-ylO07nBwLxg" label="[Min, Max]" column="_I8yl0L03Ee-ylO07nBwLxg">
+          <target xmi:type="tableModel:ImportationAlgo" href="banque_finance.xmi#//@colonnes.6/@colonneType"/>
+          <semanticElements xmi:type="tableModel:ImportationAlgo" href="banque_finance.xmi#//@colonnes.6/@colonneType"/>
+        </cells>
+      </lines>
+      <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.6"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_I-DxH703Ee-ylO07nBwLxg" label="banque.finance.moyenne" column="_I8ylwL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.6"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.6"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I-DxI703Ee-ylO07nBwLxg" label="float" column="_I8ylxL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.6"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.6"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I-DxJb03Ee-ylO07nBwLxg" label="Tableau banque finance" column="_I8ylxr03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.6"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.6"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I-DxJ703Ee-ylO07nBwLxg" label="[]" column="_I8ylyL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.6"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.6"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I-DxKb03Ee-ylO07nBwLxg" label="[]" column="_I8ylyr03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.6"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.6"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_uFYpAL03Ee-ylO07nBwLxg" label="Moyenne" column="_uEtTkL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.6"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.6"/>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_I8g48b03Ee-ylO07nBwLxg" label="Colonne 8">
+      <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.7"/>
+      <lines xmi:type="table:DLine" uid="_I8x-sL03Ee-ylO07nBwLxg" label="Algorithme">
+        <target xmi:type="tableModel:ImportationAlgo" href="banque_finance.xmi#//@colonnes.7/@colonneType"/>
+        <semanticElements xmi:type="tableModel:ImportationAlgo" href="banque_finance.xmi#//@colonnes.7/@colonneType"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']/@ownedSubLines[name='AppelAlgoLine']"/>
+        <cells xmi:type="table:DCell" uid="_I-kuer03Ee-ylO07nBwLxg" label="calcul_variation" column="_I8ylzL03Ee-ylO07nBwLxg">
+          <target xmi:type="tableModel:ImportationAlgo" href="banque_finance.xmi#//@colonnes.7/@colonneType"/>
+          <semanticElements xmi:type="tableModel:ImportationAlgo" href="banque_finance.xmi#//@colonnes.7/@colonneType"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_I-kufb03Ee-ylO07nBwLxg" label="[Fermeture, Ouverture]" column="_I8yl0L03Ee-ylO07nBwLxg">
+          <target xmi:type="tableModel:ImportationAlgo" href="banque_finance.xmi#//@colonnes.7/@colonneType"/>
+          <semanticElements xmi:type="tableModel:ImportationAlgo" href="banque_finance.xmi#//@colonnes.7/@colonneType"/>
+        </cells>
+      </lines>
+      <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.7"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_I-ZIQb03Ee-ylO07nBwLxg" label="banque.finance.variation" column="_I8ylwL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.7"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.7"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I-ZIRb03Ee-ylO07nBwLxg" label="float" column="_I8ylxL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.7"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.7"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I-ZIR703Ee-ylO07nBwLxg" label="Tableau banque finance" column="_I8ylxr03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.7"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.7"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I-ZISb03Ee-ylO07nBwLxg" label="[]" column="_I8ylyL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.7"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.7"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_I-ZIS703Ee-ylO07nBwLxg" label="[]" column="_I8ylyr03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.7"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.7"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_uFeImr03Ee-ylO07nBwLxg" label="Variation" column="_uEtTkL03Ee-ylO07nBwLxg">
+        <target xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.7"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_finance.xmi#//@colonnes.7"/>
+      </cells>
+    </lines>
+    <columns xmi:type="table:DFeatureColumn" uid="_I8ylwL03Ee-ylO07nBwLxg" label="Identifiant" cells="_I80a-L03Ee-ylO07nBwLxg _I9H89L03Ee-ylO07nBwLxg _I9UKN703Ee-ylO07nBwLxg _I9fJX703Ee-ylO07nBwLxg _I9rWn703Ee-ylO07nBwLxg _I93j2703Ee-ylO07nBwLxg _I-DxH703Ee-ylO07nBwLxg _I-ZIQb03Ee-ylO07nBwLxg" width="100" featureName="identifier">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='IdColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_I8ylwb03Ee-ylO07nBwLxg" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_uEtTkL03Ee-ylO07nBwLxg" label="Nom" cells="_uEtTk703Ee-ylO07nBwLxg _uEtTnL03Ee-ylO07nBwLxg _uE5g0b03Ee-ylO07nBwLxg _uE_Aar03Ee-ylO07nBwLxg _uFG8Or03Ee-ylO07nBwLxg _uFMbyr03Ee-ylO07nBwLxg _uFSiar03Ee-ylO07nBwLxg _uFYpAL03Ee-ylO07nBwLxg _uFeImr03Ee-ylO07nBwLxg" width="150" featureName="name">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ColumnName']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_uEtTkb03Ee-ylO07nBwLxg" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_I8ylxL03Ee-ylO07nBwLxg" label="Type" cells="_I80a_L03Ee-ylO07nBwLxg _I9H8-L03Ee-ylO07nBwLxg _I9UKO703Ee-ylO07nBwLxg _I9fJY703Ee-ylO07nBwLxg _I9rWo703Ee-ylO07nBwLxg _I94K4L03Ee-ylO07nBwLxg _I-DxI703Ee-ylO07nBwLxg _I-ZIRb03Ee-ylO07nBwLxg" width="150" featureName="dataType">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ColonneType']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_I8ylxb03Ee-ylO07nBwLxg" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_I8ylxr03Ee-ylO07nBwLxg" label="Schema Table" cells="_I80a_r03Ee-ylO07nBwLxg _I9H8-r03Ee-ylO07nBwLxg _I9TjJ703Ee-ylO07nBwLxg _I9UKPb03Ee-ylO07nBwLxg _I9fJV703Ee-ylO07nBwLxg _I9fJZb03Ee-ylO07nBwLxg _I9rWl703Ee-ylO07nBwLxg _I9rWpb03Ee-ylO07nBwLxg _I93j0703Ee-ylO07nBwLxg _I94K4r03Ee-ylO07nBwLxg _I-DxF703Ee-ylO07nBwLxg _I-DxJb03Ee-ylO07nBwLxg _I-ZIR703Ee-ylO07nBwLxg _245Y1L6yEe-1TsYj4--Rpw" width="175" featureName="tableau">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ImportTableTableColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_I8ylx703Ee-ylO07nBwLxg" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_I8ylyL03Ee-ylO07nBwLxg" label="Contrainte" cells="_I81CAb03Ee-ylO07nBwLxg _I9H8_L03Ee-ylO07nBwLxg _I9UKP703Ee-ylO07nBwLxg _I9fJZ703Ee-ylO07nBwLxg _I9rWp703Ee-ylO07nBwLxg _I94K5L03Ee-ylO07nBwLxg _I-DxJ703Ee-ylO07nBwLxg _I-ZISb03Ee-ylO07nBwLxg" width="150" featureName="contrainte">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ContraintsColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_I8ylyb03Ee-ylO07nBwLxg" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_I8ylyr03Ee-ylO07nBwLxg" label="Algorithme de contrainte" cells="_I81CA703Ee-ylO07nBwLxg _I9H8_r03Ee-ylO07nBwLxg _I9UKQb03Ee-ylO07nBwLxg _I9fwYL03Ee-ylO07nBwLxg _I9rWqb03Ee-ylO07nBwLxg _I94K5r03Ee-ylO07nBwLxg _I-DxKb03Ee-ylO07nBwLxg _I-ZIS703Ee-ylO07nBwLxg" width="200" featureName="constraints">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='CustomConstraintAlgorithm']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_I8yly703Ee-ylO07nBwLxg" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_I8ylzL03Ee-ylO07nBwLxg" label="Algorithme : Algorithme" cells="_I-Qlab03Ee-ylO07nBwLxg _I-kuer03Ee-ylO07nBwLxg" width="175" featureName="algorithm">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ImportAlgoAlgoColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_I8ylzb03Ee-ylO07nBwLxg" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_I8ylzr03Ee-ylO07nBwLxg" label="Import: identifiant" cells="_I9UKNL03Ee-ylO07nBwLxg _I9fJXL03Ee-ylO07nBwLxg _I9rWnL03Ee-ylO07nBwLxg _I93j2L03Ee-ylO07nBwLxg _I-DxHL03Ee-ylO07nBwLxg _245Y2b6yEe-1TsYj4--Rpw" width="175" featureName="identifiantColonne">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ImportTableIdColumnColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_I8ylz703Ee-ylO07nBwLxg" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_I8yl0L03Ee-ylO07nBwLxg" label="Algorithme : Entree" cells="_I-Tosr03Ee-ylO07nBwLxg _I-kufb03Ee-ylO07nBwLxg" width="175" featureName="ColonneIN">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ImportAlgoInputColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_I8yl0b03Ee-ylO07nBwLxg" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']"/>
+  </table:DTable>
+  <table:DTable uid="_eNsEoL1EEe-pO7bSpxq8Yw" headerColumnWidth="190">
+    <target xmi:type="tableModel:Tableau" href="banque_raw_finance.xmi#/"/>
+    <lines xmi:type="table:DLine" uid="_eOpG4L1EEe-pO7bSpxq8Yw" label="Tableau">
+      <target xmi:type="tableModel:Tableau" href="banque_raw_finance.xmi#/"/>
+      <semanticElements xmi:type="tableModel:Tableau" href="banque_raw_finance.xmi#/"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='TableauLine']"/>
+      <cells xmi:type="table:DCell" uid="_ePjF0b1EEe-pO7bSpxq8Yw" label="banque raw finance" column="_ePiewr1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Tableau" href="banque_raw_finance.xmi#/"/>
+        <semanticElements xmi:type="tableModel:Tableau" href="banque_raw_finance.xmi#/"/>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_eOvNgL1EEe-pO7bSpxq8Yw" label="Colonne 1    [*]">
+      <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.0"/>
+      <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_ePjs571EEe-pO7bSpxq8Yw" label="banque.finance.raw.date" column="_ePiewL1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePjs6b1EEe-pO7bSpxq8Yw" label="Date" column="_ePiewr1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePjs671EEe-pO7bSpxq8Yw" label="int" column="_ePiexL1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePjs7b1EEe-pO7bSpxq8Yw" label="Tableau banque raw finance" column="_ePiexr1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePjs771EEe-pO7bSpxq8Yw" label="[]" column="_ePieyL1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePjs8b1EEe-pO7bSpxq8Yw" label="[]" column="_ePieyr1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.0"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_ePMggL1EEe-pO7bSpxq8Yw" backgroundColor="253,206,137"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_ePSnIL1EEe-pO7bSpxq8Yw" label="Colonne 2">
+      <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.1"/>
+      <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.1"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_ePpMdL1EEe-pO7bSpxq8Yw" label="banque.finance.raw.open" column="_ePiewL1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePpMdr1EEe-pO7bSpxq8Yw" label="Open" column="_ePiewr1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePpMeL1EEe-pO7bSpxq8Yw" label="float" column="_ePiexL1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePpMer1EEe-pO7bSpxq8Yw" label="Tableau banque raw finance" column="_ePiexr1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePpMfL1EEe-pO7bSpxq8Yw" label="[]" column="_ePieyL1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePpMfr1EEe-pO7bSpxq8Yw" label="[]" column="_ePieyr1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.1"/>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_ePTOMb1EEe-pO7bSpxq8Yw" label="Colonne 3">
+      <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.2"/>
+      <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.2"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_ePpzhL1EEe-pO7bSpxq8Yw" label="banque.finance.raw.high" column="_ePiewL1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePpzhr1EEe-pO7bSpxq8Yw" label="High" column="_ePiewr1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePpziL1EEe-pO7bSpxq8Yw" label="float" column="_ePiexL1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePpzir1EEe-pO7bSpxq8Yw" label="Tableau banque raw finance" column="_ePiexr1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePpzjL1EEe-pO7bSpxq8Yw" label="[]" column="_ePieyL1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePpzjr1EEe-pO7bSpxq8Yw" label="[]" column="_ePieyr1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.2"/>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_ePT1QL1EEe-pO7bSpxq8Yw" label="Colonne 4">
+      <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.3"/>
+      <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.3"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_ePqalL1EEe-pO7bSpxq8Yw" label="banque.finance.raw.low" column="_ePiewL1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.3"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.3"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePqalr1EEe-pO7bSpxq8Yw" label="Low" column="_ePiewr1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.3"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.3"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePqamL1EEe-pO7bSpxq8Yw" label="float" column="_ePiexL1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.3"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.3"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePqamr1EEe-pO7bSpxq8Yw" label="Tableau banque raw finance" column="_ePiexr1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.3"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.3"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePqanL1EEe-pO7bSpxq8Yw" label="[]" column="_ePieyL1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.3"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.3"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePqanr1EEe-pO7bSpxq8Yw" label="[]" column="_ePieyr1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.3"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.3"/>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_ePT1Qr1EEe-pO7bSpxq8Yw" label="Colonne 5">
+      <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.4"/>
+      <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.4"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_ePrBpL1EEe-pO7bSpxq8Yw" label="banque.finance.raw.close" column="_ePiewL1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.4"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.4"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePrBpr1EEe-pO7bSpxq8Yw" label="Close" column="_ePiewr1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.4"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.4"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePrBqL1EEe-pO7bSpxq8Yw" label="float" column="_ePiexL1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.4"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.4"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePrBqr1EEe-pO7bSpxq8Yw" label="Tableau banque raw finance" column="_ePiexr1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.4"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.4"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePrBrL1EEe-pO7bSpxq8Yw" label="[]" column="_ePieyL1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.4"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.4"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePrBrr1EEe-pO7bSpxq8Yw" label="[]" column="_ePieyr1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.4"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.4"/>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_ePUcUb1EEe-pO7bSpxq8Yw" label="Colonne 6">
+      <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.5"/>
+      <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.5"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_ePrBs71EEe-pO7bSpxq8Yw" label="banque.finance.raw.adjclose" column="_ePiewL1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.5"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.5"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePrBtb1EEe-pO7bSpxq8Yw" label="Adj Close" column="_ePiewr1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.5"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.5"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePrBt71EEe-pO7bSpxq8Yw" label="float" column="_ePiexL1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.5"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.5"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePrBub1EEe-pO7bSpxq8Yw" label="Tableau banque raw finance" column="_ePiexr1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.5"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.5"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_eProsb1EEe-pO7bSpxq8Yw" label="[]" column="_ePieyL1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.5"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.5"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_ePros71EEe-pO7bSpxq8Yw" label="[]" column="_ePieyr1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.5"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.5"/>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_ePVDYL1EEe-pO7bSpxq8Yw" label="Colonne 7">
+      <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.6"/>
+      <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.6"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_eProuL1EEe-pO7bSpxq8Yw" label="banque.finance.raw.volume" column="_ePiewL1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.6"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.6"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_eProur1EEe-pO7bSpxq8Yw" label="Volume" column="_ePiewr1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.6"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.6"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_eProvL1EEe-pO7bSpxq8Yw" label="float" column="_ePiexL1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.6"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.6"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_eProvr1EEe-pO7bSpxq8Yw" label="Tableau banque raw finance" column="_ePiexr1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.6"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.6"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_eProwL1EEe-pO7bSpxq8Yw" label="[]" column="_ePieyL1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.6"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.6"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_eProwr1EEe-pO7bSpxq8Yw" label="[]" column="_ePieyr1EEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.6"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="banque_raw_finance.xmi#//@colonnes.6"/>
+      </cells>
+    </lines>
+    <columns xmi:type="table:DFeatureColumn" uid="_ePiewL1EEe-pO7bSpxq8Yw" label="Identifiant" cells="_ePjs571EEe-pO7bSpxq8Yw _ePpMdL1EEe-pO7bSpxq8Yw _ePpzhL1EEe-pO7bSpxq8Yw _ePqalL1EEe-pO7bSpxq8Yw _ePrBpL1EEe-pO7bSpxq8Yw _ePrBs71EEe-pO7bSpxq8Yw _eProuL1EEe-pO7bSpxq8Yw" width="100" featureName="identifier">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='IdColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_ePiewb1EEe-pO7bSpxq8Yw" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_ePiewr1EEe-pO7bSpxq8Yw" label="Nom" cells="_ePjF0b1EEe-pO7bSpxq8Yw _ePjs6b1EEe-pO7bSpxq8Yw _ePpMdr1EEe-pO7bSpxq8Yw _ePpzhr1EEe-pO7bSpxq8Yw _ePqalr1EEe-pO7bSpxq8Yw _ePrBpr1EEe-pO7bSpxq8Yw _ePrBtb1EEe-pO7bSpxq8Yw _eProur1EEe-pO7bSpxq8Yw" width="150" featureName="name">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ColumnName']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_ePiew71EEe-pO7bSpxq8Yw" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_ePiexL1EEe-pO7bSpxq8Yw" label="Type" cells="_ePjs671EEe-pO7bSpxq8Yw _ePpMeL1EEe-pO7bSpxq8Yw _ePpziL1EEe-pO7bSpxq8Yw _ePqamL1EEe-pO7bSpxq8Yw _ePrBqL1EEe-pO7bSpxq8Yw _ePrBt71EEe-pO7bSpxq8Yw _eProvL1EEe-pO7bSpxq8Yw" width="150" featureName="dataType">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ColonneType']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_ePiexb1EEe-pO7bSpxq8Yw" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_ePiexr1EEe-pO7bSpxq8Yw" label="Schema Table" cells="_ePjs7b1EEe-pO7bSpxq8Yw _ePpMer1EEe-pO7bSpxq8Yw _ePpzir1EEe-pO7bSpxq8Yw _ePqamr1EEe-pO7bSpxq8Yw _ePrBqr1EEe-pO7bSpxq8Yw _ePrBub1EEe-pO7bSpxq8Yw _eProvr1EEe-pO7bSpxq8Yw" width="175" featureName="tableau">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ImportTableTableColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_ePiex71EEe-pO7bSpxq8Yw" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_ePieyL1EEe-pO7bSpxq8Yw" label="Contrainte" cells="_ePjs771EEe-pO7bSpxq8Yw _ePpMfL1EEe-pO7bSpxq8Yw _ePpzjL1EEe-pO7bSpxq8Yw _ePqanL1EEe-pO7bSpxq8Yw _ePrBrL1EEe-pO7bSpxq8Yw _eProsb1EEe-pO7bSpxq8Yw _eProwL1EEe-pO7bSpxq8Yw" width="150" featureName="contrainte">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ContraintsColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_ePieyb1EEe-pO7bSpxq8Yw" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_ePieyr1EEe-pO7bSpxq8Yw" label="Algorithme de contrainte" cells="_ePjs8b1EEe-pO7bSpxq8Yw _ePpMfr1EEe-pO7bSpxq8Yw _ePpzjr1EEe-pO7bSpxq8Yw _ePqanr1EEe-pO7bSpxq8Yw _ePrBrr1EEe-pO7bSpxq8Yw _ePros71EEe-pO7bSpxq8Yw _eProwr1EEe-pO7bSpxq8Yw" width="200" featureName="constraints">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='CustomConstraintAlgorithm']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_ePiey71EEe-pO7bSpxq8Yw" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_ePiezL1EEe-pO7bSpxq8Yw" label="Algorithme : Algorithme" width="175" featureName="algorithm">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ImportAlgoAlgoColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_ePiezb1EEe-pO7bSpxq8Yw" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_ePiezr1EEe-pO7bSpxq8Yw" label="Import: identifiant" width="175" featureName="identifiantColonne">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ImportTableIdColumnColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_ePiez71EEe-pO7bSpxq8Yw" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_ePie0L1EEe-pO7bSpxq8Yw" label="Algorithme : Entree" width="175" featureName="ColonneIN">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ImportAlgoInputColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_ePie0b1EEe-pO7bSpxq8Yw" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']"/>
+  </table:DTable>
+  <table:DTable uid="_7hPo0L1FEe-pO7bSpxq8Yw" headerColumnWidth="190">
+    <target xmi:type="tableModel:Tableau" href="MyTableModel.tableModel#/"/>
+    <lines xmi:type="table:DLine" uid="_7hYLsL1FEe-pO7bSpxq8Yw" label="Tableau">
+      <target xmi:type="tableModel:Tableau" href="MyTableModel.tableModel#/"/>
+      <semanticElements xmi:type="tableModel:Tableau" href="MyTableModel.tableModel#/"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='TableauLine']"/>
+      <cells xmi:type="table:DCell" uid="_7hYy1L1FEe-pO7bSpxq8Yw" label="tableau" column="_7hYyw71FEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Tableau" href="MyTableModel.tableModel#/"/>
+        <semanticElements xmi:type="tableModel:Tableau" href="MyTableModel.tableModel#/"/>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_-AAKQr1FEe-pO7bSpxq8Yw" label="Colonne 1    [*]">
+      <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+      <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_-ABYab1FEe-pO7bSpxq8Yw" label="" column="_7hYywb1FEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_-ABYa71FEe-pO7bSpxq8Yw" label="" column="_7hYyw71FEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_-ABYbb1FEe-pO7bSpxq8Yw" label="string" column="_7hYyxb1FEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_-ABYb71FEe-pO7bSpxq8Yw" label="Tableau tableau" column="_7hYyx71FEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_-ABYcb1FEe-pO7bSpxq8Yw" label="[]" column="_7hYyyb1FEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_-ABYc71FEe-pO7bSpxq8Yw" label="[]" column="_7hYyy71FEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.0"/>
+      </cells>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="__NkJkL1FEe-pO7bSpxq8Yw" backgroundColor="253,206,137"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_AOe0AL1GEe-pO7bSpxq8Yw" label="Colonne 2">
+      <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+      <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_AOgCIL1GEe-pO7bSpxq8Yw" label="banque" column="_7hYywb1FEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_AOgCIr1GEe-pO7bSpxq8Yw" label="" column="_7hYyw71FEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_AOgCJL1GEe-pO7bSpxq8Yw" label="string" column="_7hYyxb1FEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_AOgCJr1GEe-pO7bSpxq8Yw" label="Tableau tableau" column="_7hYyx71FEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_AOgCKL1GEe-pO7bSpxq8Yw" label="[DOIT_ETRE_POSITIF]" column="_7hYyyb1FEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_AOgCKr1GEe-pO7bSpxq8Yw" label="[Positif]" column="_7hYyy71FEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.1"/>
+      </cells>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_IjHjsr1GEe-pO7bSpxq8Yw" label="Colonne 3">
+      <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+      <lines xmi:type="table:DLine" uid="_KvcRUL1GEe-pO7bSpxq8Yw" label="Imported">
+        <target xmi:type="tableModel:ImportationTableau" href="MyTableModel.tableModel#//@colonnes.2/@colonneType"/>
+        <semanticElements xmi:type="tableModel:ImportationTableau" href="MyTableModel.tableModel#//@colonnes.2/@colonneType"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']/@ownedSubLines[name='ImportTableLine']"/>
+        <cells xmi:type="table:DCell" uid="_Kvc4bb1GEe-pO7bSpxq8Yw" label="Tableau banque finance" column="_7hYyx71FEe-pO7bSpxq8Yw">
+          <target xmi:type="tableModel:ImportationTableau" href="MyTableModel.tableModel#//@colonnes.2/@colonneType"/>
+          <semanticElements xmi:type="tableModel:ImportationTableau" href="MyTableModel.tableModel#//@colonnes.2/@colonneType"/>
+        </cells>
+        <cells xmi:type="table:DCell" uid="_Kvc4cr1GEe-pO7bSpxq8Yw" label="" column="_7hYyz71FEe-pO7bSpxq8Yw">
+          <target xmi:type="tableModel:ImportationTableau" href="MyTableModel.tableModel#//@colonnes.2/@colonneType"/>
+          <semanticElements xmi:type="tableModel:ImportationTableau" href="MyTableModel.tableModel#//@colonnes.2/@colonneType"/>
+        </cells>
+      </lines>
+      <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedLineMappings[name='ColonneLine']"/>
+      <cells xmi:type="table:DCell" uid="_IjIx671GEe-pO7bSpxq8Yw" label="" column="_7hYywb1FEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_IjIx7b1GEe-pO7bSpxq8Yw" label="" column="_7hYyw71FEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_IjIx771GEe-pO7bSpxq8Yw" label="string" column="_7hYyxb1FEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_IjIx8b1GEe-pO7bSpxq8Yw" label="Tableau tableau" column="_7hYyx71FEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_IjJY4b1GEe-pO7bSpxq8Yw" label="[]" column="_7hYyyb1FEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_IjJY471GEe-pO7bSpxq8Yw" label="[]" column="_7hYyy71FEe-pO7bSpxq8Yw">
+        <target xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+        <semanticElements xmi:type="tableModel:Colonne" href="MyTableModel.tableModel#//@colonnes.2"/>
+      </cells>
+    </lines>
+    <columns xmi:type="table:DFeatureColumn" uid="_7hYywb1FEe-pO7bSpxq8Yw" label="Identifiant" cells="_-ABYab1FEe-pO7bSpxq8Yw _AOgCIL1GEe-pO7bSpxq8Yw _IjIx671GEe-pO7bSpxq8Yw" width="100" featureName="identifier">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='IdColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_7hYywr1FEe-pO7bSpxq8Yw" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_7hYyw71FEe-pO7bSpxq8Yw" label="Nom" cells="_7hYy1L1FEe-pO7bSpxq8Yw _-ABYa71FEe-pO7bSpxq8Yw _AOgCIr1GEe-pO7bSpxq8Yw _IjIx7b1GEe-pO7bSpxq8Yw" width="150" featureName="name">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ColumnName']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_7hYyxL1FEe-pO7bSpxq8Yw" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_7hYyxb1FEe-pO7bSpxq8Yw" label="Type" cells="_-ABYbb1FEe-pO7bSpxq8Yw _AOgCJL1GEe-pO7bSpxq8Yw _IjIx771GEe-pO7bSpxq8Yw" width="150" featureName="dataType">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ColonneType']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_7hYyxr1FEe-pO7bSpxq8Yw" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_7hYyx71FEe-pO7bSpxq8Yw" label="Schema Table" cells="_-ABYb71FEe-pO7bSpxq8Yw _AOgCJr1GEe-pO7bSpxq8Yw _IjIx8b1GEe-pO7bSpxq8Yw _Kvc4bb1GEe-pO7bSpxq8Yw" width="175" featureName="tableau">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ImportTableTableColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_7hYyyL1FEe-pO7bSpxq8Yw" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_7hYyyb1FEe-pO7bSpxq8Yw" label="Contrainte" cells="_-ABYcb1FEe-pO7bSpxq8Yw _AOgCKL1GEe-pO7bSpxq8Yw _IjJY4b1GEe-pO7bSpxq8Yw" width="150" featureName="contrainte">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ContraintsColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_7hYyyr1FEe-pO7bSpxq8Yw" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_7hYyy71FEe-pO7bSpxq8Yw" label="Algorithme de contrainte" cells="_-ABYc71FEe-pO7bSpxq8Yw _AOgCKr1GEe-pO7bSpxq8Yw _IjJY471GEe-pO7bSpxq8Yw" width="200" featureName="constraints">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='CustomConstraintAlgorithm']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_7hYyzL1FEe-pO7bSpxq8Yw" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_7hYyzb1FEe-pO7bSpxq8Yw" label="Algorithme : Algorithme" width="175" featureName="algorithm">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ImportAlgoAlgoColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_7hYyzr1FEe-pO7bSpxq8Yw" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_7hYyz71FEe-pO7bSpxq8Yw" label="Import: identifiant" cells="_Kvc4cr1GEe-pO7bSpxq8Yw" width="175" featureName="identifiantColonne">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ImportTableIdColumnColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_7hYy0L1FEe-pO7bSpxq8Yw" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_7hYy0b1FEe-pO7bSpxq8Yw" label="Algorithme : Entree" width="175" featureName="ColonneIN">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']/@ownedColumnMappings[name='ImportAlgoInputColumn']"/>
+      <currentStyle xmi:type="table:DTableElementStyle" uid="_7hYy0r1FEe-pO7bSpxq8Yw" defaultBackgroundStyle="true" backgroundColor="209,209,209"/>
+    </columns>
+    <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/schemaTable.design/description/schemaTable.odesign#//@ownedViewpoints[name='tableModelViewpoint']/@ownedRepresentations[name='tableModelTable']"/>
+  </table:DTable>
+</xmi:XMI>
